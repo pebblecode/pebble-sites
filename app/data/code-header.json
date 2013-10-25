@@ -1,0 +1,8 @@
+{
+  "company": "pebble{code}",
+  "pages": [
+    { "page": "work" },
+    { "page": "people" },
+    { "page": "insights" }
+  ]
+}

@@ -380,6 +380,16 @@ input[type="submit"]:hover {
   clear: both;
 }
 
+/* line 17, /Users/markdurrant/repos/pebble-sites-redesign/app/sass/_helpers.scss */
+.left {
+  float: left;
+}
+
+/* line 21, /Users/markdurrant/repos/pebble-sites-redesign/app/sass/_helpers.scss */
+.right {
+  float: right;
+}
+
 /* line 4, /Users/markdurrant/repos/pebble-sites-redesign/app/sass/_layout.scss */
 .wrap {
   width: 66.666%;
@@ -502,6 +512,23 @@ h6 {
   height: 60px;
   position: fixed;
   top: 0;
+  padding: 0 1em;
+}
+/* line 13, /Users/markdurrant/repos/pebble-sites-redesign/app/sass/_header.scss */
+.site-header h1,
+.site-header a {
+  color: white;
+  text-decoration: none;
+  line-height: 60px;
+}
+
+/* line 20, /Users/markdurrant/repos/pebble-sites-redesign/app/sass/_header.scss */
+.site-nav li {
+  margin-left: 1em;
+}
+/* line 23, /Users/markdurrant/repos/pebble-sites-redesign/app/sass/_header.scss */
+.site-nav li:first-child {
+  margin-left: 0;
 }
 
 /* line 4, /Users/markdurrant/repos/pebble-sites-redesign/app/sass/_footer.scss */

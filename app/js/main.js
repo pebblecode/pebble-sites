@@ -2,12 +2,13 @@
 (function (){
   'use strict';
 
-  $.getJSON( "templates/data.json", function( json ) {
+  function buildTemplate ( template, data, element ) {
+    $.getJSON( data, function( json ) {
+      $( element ).append( JST[ template ] ( json ) );
+    });
+  }
 
-    var postTemplate = JST['app/templates/template.hbs'];
-    var html = postTemplate( json );
-    
-    $('.wrap').append( html );
-  });
+  buildTemplate( 'app/templates/template.hbs', 'data/data.json', '.wrap');
+  buildTemplate( 'app/templates/code-header.hbs', 'data/code-header.json', '.site-header');
 
 })();

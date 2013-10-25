@@ -7,4 +7,20 @@
   height: $header-height;
   position: fixed;
   top: 0;
+  padding: 0 1em;
+
+  h1,
+  a {
+    color: white;
+    text-decoration: none;
+    line-height: $header-height;
+  }
+}
+
+.site-nav li{
+  margin-left: 1em;
+
+  &:first-child {
+    margin-left: 0;
+  }
 }
