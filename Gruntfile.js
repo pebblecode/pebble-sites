@@ -50,14 +50,14 @@ module.exports = function (grunt) {
     },
 
     sass: {
-      dist: {                            // Target
-        options: {                       // Target options
+      dist: {
+        options: {
           style: 'expanded',
           lineNumbers: true
         },
 
-        files: {                         // Dictionary of files
-          'app/css/styles.css': 'app/sass/styles.scss'       // 'destination': 'source'
+        files: {
+          'app/css/styles.css': 'app/sass/styles.scss'
         }
       }
     },
@@ -68,7 +68,7 @@ module.exports = function (grunt) {
         src: ['Gruntfile.js']
       },
       js: {
-        src: ['app/js/*.js', 'test/**/*.js']
+        src: ['app/js/*.js', 'test/**/*.js', '!app/js/templates.js']
       }
     },
 
@@ -82,7 +82,7 @@ module.exports = function (grunt) {
         tasks: ['jshint:gruntfile']
       },
       scripts: {
-        files: 'app/js/*.js',
+        files: ['app/js/*.js', '!app/js/templates.js'],
         tasks: ['jshint'],
         options: {
           livereload: true
@@ -97,6 +97,10 @@ module.exports = function (grunt) {
         options: {
           livereload: true
         }
+      },
+      handlebars: {
+        files: ["app/templates/**/*.hbs"],
+        tasks: ['handlebars']
       }
     },
 
@@ -111,7 +115,7 @@ module.exports = function (grunt) {
         base: 'app'
       },
 
-      src: ['*.html', 'js/**/*', 'css/**/*', 'img/**/*']
+      src: ['*.html', 'js/**/*', 'css/**/*', 'img/**/*', '!app/js/templates.js']
     }
   });
 

@@ -1,0 +1,9 @@
+{
+  "people": [
+    { "name": "Bruce Wayne", "title": "Batman" },
+    { "name": "Clark Kent", "title": "Superman" },
+    { "name": "Hal Jordan", "title": "Green Lantern" },
+    { "name": "Diana Themescura", "title": "Wonder Woman" },
+    { "name": "Wally West", "title": "The Flash" }
+  ]
+}

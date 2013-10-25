@@ -46,3 +46,20 @@
 // DEV-STYLES
 //===============================================================================
 // playground for development
+.name,
+.title {
+  display: block;
+  line-height: 1;
+}
+
+.name {
+  color: #555;
+  display: bold;
+  font-size: 1.3em;
+}
+
+.title {
+  color: #777;
+  font-size: .8em;
+  margin-bottom: 2em;
+}

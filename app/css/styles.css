@@ -512,3 +512,24 @@ h6 {
   height: 100px;
   width: 100%;
 }
+
+/* line 50 */
+.name,
+.title {
+  display: block;
+  line-height: 1;
+}
+
+/* line 55 */
+.name {
+  color: #555;
+  display: bold;
+  font-size: 1.3em;
+}
+
+/* line 61 */
+.title {
+  color: #777;
+  font-size: .8em;
+  margin-bottom: 2em;
+}

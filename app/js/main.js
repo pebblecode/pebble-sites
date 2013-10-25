@@ -1,16 +1,13 @@
-/*global $:true, console:true, Handlebars:true*/
+/*global $:true, console:true, Handlebars:true, JST:true*/
 (function (){
   'use strict';
 
+  $.getJSON( "templates/data.json", function( json ) {
 
-  var post = {
-    title: 'working?'
-  };
-
-  var postTemplate = JST['app/templates/template.hbs'];
-
-  var html = postTemplate(post);
-
-  $('.wrap').append( html );
+    var postTemplate = JST['app/templates/template.hbs'];
+    var html = postTemplate( json );
+    
+    $('.wrap').append( html );
+  });
 
 })();
