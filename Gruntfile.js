@@ -57,7 +57,8 @@ module.exports = function (grunt) {
         },
 
         files: {
-          'app/css/styles.css': 'app/sass/styles.scss'
+          'app/css/code-styles.css': 'app/sass/code-styles.scss',
+          'app/css/it-styles.css': 'app/sass/it-styles.scss'
         }
       }
     },

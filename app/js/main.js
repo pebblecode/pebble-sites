@@ -1,14 +1,9 @@
 /*global $:true, console:true, Handlebars:true, JST:true*/
-(function (){
-  'use strict';
 
-  function buildTemplate ( template, data, element ) {
-    $.getJSON( data, function( json ) {
-      $( element ).append( JST[ template ] ( json ) );
-    });
-  }
+function buildTemplate ( template, data, element ) {
+  $.getJSON( data, function( json ) {
+    $( element ).append( JST[ template ] ( json ) );
+  });
+}
 
-  buildTemplate( 'app/templates/template.hbs', 'data/data.json', '.wrap');
-  buildTemplate( 'app/templates/code-header.hbs', 'data/code-header.json', '.site-header');
-
-})();
+buildTemplate( 'app/templates/template.hbs', 'data/data.json', '.wrap');

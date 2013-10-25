@@ -2,7 +2,7 @@
 // HEADER
 //===============================================================================
 .site-header {
-  background: $pc-pink;
+  background: which-pebble($pc-pink, $it-blue);
   width: 100%;
   height: $header-height;
   position: fixed;
