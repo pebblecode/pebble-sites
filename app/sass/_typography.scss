@@ -6,89 +6,70 @@ h1, h2, h3, h4, h5, h6{
 }
 
 // font sizes
-.tera,
-.giga,
-.mega{
-  line-height: 1.1;
-}
-
 .tera{
-  font-size: 4.6em;
+  font-size: 76px;
 }
 
 .giga{
-  font-size: 3.5em;
+  font-size: 60px;
 }
 
 .mega{
-  font-size: 2.6em;
+  font-size: 42px;
 }
 
 .alpha{
-  font-size: 2em;
-  line-height: 1.2;
+  font-size: 30px;
 }
 
 .beta{
-  font-size: 1.5em;
-  line-height: 1.2;
+  font-size: 26px;
 }
 
 .gamma{
-  font-size: 1.17em;
-  line-height: 1.2;
+  font-size: 22px;
 }
 
 .delta{
-  font-size: 1em;
-  line-height: 1.2;
+  font-size: 18px;
 }
 
 .epsilon{
-  font-size: .83em;
-  line-height: 1.2;
+  font-size: 16px;
 }
 
 .zeta{
-  font-size: .75em;
-  line-height: 1.2;
-}
-
-.alpha,
-.beta,
-.gamma,
-.delta,
-.epsilon,
-.zeta{
-  line-height: 1.2;
+  font-size: 12px;
 }
 
 h1{
   @extend .alpha;
-  margin-bottom: (.6em / 2);
 }
 
 h2{
   @extend .beta;
-  margin-bottom: (.6em / 1.5);
 }
 
 h3{
   @extend .gamma;
-  margin-bottom: (.6em / 1.17);
 }
 
 h4{
   @extend .delta;
-  margin-bottom: (.6em / 1);
 }
 
 h5{
   @extend .epsilon;
-  margin-bottom: (.6em / .83);
 }
 
 h6{
   @extend .zeta;
-  margin-bottom: (.6em / .75);
+}
+
+.call-out{
+  font-family: "brandon-grotesque";
+  font-weight: 900;
+  font-style: italic;
+  text-transform: uppercase;
+  line-height: 1.05;
 }

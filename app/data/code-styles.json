@@ -1,0 +1,13 @@
+{
+  "logo": "img/pc-logo.svg",
+  "colors": [
+    {"name": "$paper", "value": "#FFF"},
+    {"name": "$ink", "value": "#555"},
+    {"name": "$pc-pink", "value": "#EE5080"},
+    {"name": "$pc-purple", "value": "#9B5CA4"},
+    {"name": "$pc-blue", "value": "#0EA2DC"},
+    {"name": "$pc-aqua", "value": "#37BEC0"},
+    {"name": "$pc-green", "value": "#A4CE4E"},
+    {"name": "$pc-orange", "value": "#FAAD40"}
+  ] 
+}

@@ -17,9 +17,10 @@ html {
 body{
   background-color: $paper;
   color: $ink; 
-  font-size: 1.0625em;
+  font-size: 18px;
   font-family: $body-font;
-  line-height: 1.4;
+  font-weight: 300;
+  line-height: 1.45;
   margin-bottom: $footer-height;
 }
 
@@ -30,16 +31,26 @@ ol,
 dl,
 blockquote,
 pre{
-  margin: 0 0 .6em 0;
+  margin: 0 0 18px 0;
 }
 
 ol,{
   padding-left: 1.4em;
+
+  ol,
+  ol ol{
+    margin-bottom: 0;
+  }
 }
 
 ul{
   padding: 0;
   list-style: none;
+
+  ul,
+  ul ul{
+    margin-bottom: 0;
+  }
 }
 
 dt{
@@ -51,19 +62,32 @@ dd{
 }
 
 a{
-  color: $link;
-  font-weight: bolder;
+  color: which-pebble($pc-pink, $it-blue);
+  font-weight: 700;
 
-  &:hover{
-    color: darken($link, 10);  
+  &:hover,
+  &.hover{
+    color: which-pebble( darken($pc-pink, 15), darken($it-blue, 15) );  
+  }
+
+  &:active,
+  &.active{
+    color: which-pebble( darken($pc-pink, 30), darken($it-blue, 30) );
+  }
+
+  // commented out for development
+  // &:visited,
+  &.visited{
+    color: which-pebble( lighten($pc-pink, 15), lighten($it-blue, 15) );
   }
 }
 
 blockquote{
   margin: 0;
-  padding: 0 2em;
-  border-left: .2em solid $ink;
+  padding: 0 60px;
+  border-left: 4px solid which-pebble($pc-pink, $it-blue);
   font-style: italic;
+  font-weight: 700;
 
   p:before{
     margin: 0 .2em 0 -.6em;
@@ -79,8 +103,10 @@ pre{
   @include border-radius(.2em);
 
   padding: .85em 1.05em;
-  background-color: lighten($ink, 20);
+  background-color: darken($ink, 20);
   color: $paper;
+  font-weight: 700;
+  letter-spacing: 1px;
 }
 
 p code,
@@ -95,7 +121,7 @@ p samp{
 hr{
   margin: 2em 0;
   border: 0;
-  border-top: 1px dashed $ink;
+  border-top: 1px solid darken($paper, 10);
 }
 
 button,
@@ -105,16 +131,65 @@ input[type="submit"]{
   @include border-radius(2px);
   
   display: inline-block;
-  padding: .3em .5em;
+  padding: 10px 14px;
+  text-transform: uppercase;
   border: 0;
-  background-color: darken($paper, 30);
+  background-color: which-pebble($pc-pink, $it-blue);
   color: $paper;
   text-decoration: none;
-  font-weight: normal;
+  font-weight: 700;
   line-height: 1;
 
-  &:hover{
-    background-color: darken($paper, 40);
-    color: $paper;
+  &:hover,
+  &.hover{
+    background-color: which-pebble( darken($pc-pink, 15), darken($it-blue, 15) );
+  }
+
+  &:active,
+  &.active{
+    background-color: which-pebble( darken($pc-pink, 30), darken($it-blue, 30) );
+  }
+
+  &.disabled{
+    background-color: darken($paper, 20);
+    cursor: default;
+  }
+}
+
+table{
+  width: 100%;
+  border: 1px solid which-pebble( $pc-pink, $it-blue );
+}
+
+thead{
+  text-align: left;
+}
+
+tr{
+  border-bottom: 1px solid darken($paper, 10);
+  border-left: 1px solid which-pebble( $pc-pink, $it-blue );
+  border-right: 1px solid which-pebble( $pc-pink, $it-blue );
+
+  &:nth-child(odd){
+    background-color: which-pebble( lighten($pc-pink, 35), lighten($it-blue, 35) );
+  }
+
+  &:last-child{
+    border: 0;
+  }
+}
+
+th{
+  padding: 2px 8px;
+  background-color: which-pebble( $pc-pink, $it-blue );
+  color: $paper;
+}
+
+td{
+  border-right: 1px solid darken($paper, 10);
+  padding: 2px 8px;
+
+  &:last-child{
+    border: 0;
   }
 }

@@ -1,12 +1,12 @@
 //===============================================================================
 // VARIABLES
 //===============================================================================
-$paper: hsl(0, 0, 100);
-$ink: hsl(0, 0, 0);
+$paper: hsl(220, 10, 99);
+$ink: #6B7482;
 $link: hsl(220,100,40);
 $header: $ink;
 
-$body-font: sans-serif;
+$body-font: "museo-sans", sans-serif;
 
 $header-height: 60px;
 $footer-height: 100px;

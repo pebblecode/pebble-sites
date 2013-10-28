@@ -1,0 +1,75 @@
+//===============================================================================
+// STYLE GUIDE
+//===============================================================================
+.style-guide{
+  .image-container{
+    border: 1px solid darken($paper, 10);
+    display: inline-block;
+    padding: 15px;
+    color: lighten( $ink, 20 );
+    font-weight: 700;
+
+    span{
+      margin-bottom: 0;
+    }
+  }
+
+  span{
+    display: block;
+  }
+
+  h2 {
+    margin: 50px 0 4px -30px;
+    text-transform: uppercase;
+    color: $pc-pink;
+  }
+
+  .color-box{
+    width: 140px;
+    height: 140px;
+    margin-right: 20px;
+    margin-bottom: 8px;
+
+    &:first-child{
+      border: 1px solid darken($paper, 10);
+    }
+  }
+
+  .headers h2{
+    margin: 0 0 18px;
+    color: $header;
+    text-transform: lowercase;
+  }
+
+  .color-name,
+  .color-value{
+    text-transform: uppercase;
+    font-weight: 700;
+    line-height: 1;
+  }
+
+  .color-value{
+    color: lighten( $ink, 20 );
+    margin: 4px 0 15px;
+  }
+
+  .type-sizes span{
+    margin-bottom: 25px;
+  }
+
+  .type-name{
+    margin-top: 25px;
+    color: lighten($ink, 20);
+
+    &:first-child{
+      margin-top: 0;
+    }
+  }
+
+  .on-bg{
+    color: white;
+    background: which-pebble($pc-pink, $it-blue);
+    padding: 20px;
+    margin-top: 25px;
+  }
+}

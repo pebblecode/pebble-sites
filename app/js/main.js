@@ -5,5 +5,3 @@ function buildTemplate ( template, data, element ) {
     $( element ).append( JST[ template ] ( json ) );
   });
 }
-
-buildTemplate( 'app/templates/template.hbs', 'data/data.json', '.wrap');
