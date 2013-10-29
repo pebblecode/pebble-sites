@@ -39,7 +39,10 @@
     <script src="js/main.js"></script>
 
     <!-- pebble.it specific JS -->
-    <script src="js/it.js"></script>
+    <script>
+      buildTemplate( 'app/templates/header.hbs', 'data/it-header.json', '.site-header');
+      buildTemplate( 'app/templates/style-guide.hbs', 'data/it-styles.json', '.wrap');
+    </script>
 
   </body>
 </html>
