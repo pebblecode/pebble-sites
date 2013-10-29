@@ -4,7 +4,11 @@
 <nav class="site-nav right">
   <ul class="clear-fix">
     {{#each pages}}
-      <li class="left"><a href="{{page}}.html" class="nav-item">{{page}}</a></li>
+      <li class="left">
+        <a href="{{page}}.html" class="nav-item">{{page}}
+          <span data-page="{{page}}">{{page}}</span>
+        </a>
+      </li>
     {{/each}}
   </ul>
 </nav>
