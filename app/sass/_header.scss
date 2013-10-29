@@ -16,25 +16,36 @@
 
 .site-nav{
   a{
-    line-height: $header-height;
-    -webkit-perspective: 1000px;
-    overflow: hidden;
-    color: white;
-    position: relative;
-    display: block;
-    text-align: center;
-    padding: 0 12px;
-    background: lighten($pc-pink, 4);
+    display: inline-block;
+    height: $header-height;
     text-decoration: none;
-    transform: translate3d(0, 0, 0);
+    -webkit-perspective: -1000px;
 
-    &:hover span{
-      -webkit-transform: rotateX(90deg) translateY(-60px);
-      background: darken($pc-pink, 10);
-      opacity: 0;
+    &::after{
+      content: attr(data-page);
+      position: absolute;
+      font-weight: 300;
+      top: 0;
+      left: 0;
+      height: $header-height;
+      line-height: $header-height;
+      text-align: center;
+      background: which-pebble($pc-pink, $it-blue);
+      color: white;
+      width: 100%;
+      -webkit-transform-origin: 50% 0%;
+      -webkit-transform: rotateX(0deg);
+      transition: -webkit-transform .3s, background .3s;
+    }
 
-      &::before{
-        background: lighten($pc-pink, 4);
+    &:hover{
+      &::after{
+        -webkit-transform: rotateX(-90deg);   
+        background: which-pebble(darken($pc-pink, 15), darken($it-blue, 15));
+      }
+      span{
+        -webkit-transform: rotateX(0deg);
+        background: which-pebble(lighten($pc-pink, 5), lighten($it-blue, 5));
       }
     }
   }
@@ -42,37 +53,15 @@
   span{
     color: white;
     font-size: 20px;
-    line-height: $header-height;
-    height: $header-height -1px;
-    background: $pc-pink;
-    text-align: center;
-    // padding: 0 12px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    text-decoration: none;
-    display: block;
-    -webkit-transition: -webkit-transform 0.3s, background 0.3s, opacity 0.15s 0.35s;
-    -webkit-transform-origin: 50% 0;
-    -webkit-transform-style: preserve-3d;
-    font-weight: 300;
-    transform: translate3d(0, 0, 0);
-
-    &::before{
-      content: attr(data-page);
-      position: absolute;
-      top: 100%;
-      transform: translate3d(0, 0, 0);
-      left: 0;
-      right: 0;
-      height: 100%;
-      font-weight: 700;
-      -webkit-transition: background 0.3s;
-      -webkit-transform-origin: 50% 0;
-      -webkit-transform: rotateX(-90deg);
-    }
+    line-height: $header-height - 1px;
+    height: $header-height;
+    font-weight: 700;
+    padding: 0 12px;
+    display: inline-block;
+    background: which-pebble($pc-pink, $it-blue);
+    -webkit-transform-origin: 50% 100%;
+    -webkit-transform: rotateX(-90deg);
+    transition: -webkit-transform .3s, background .3s;
   }
 
   li{
