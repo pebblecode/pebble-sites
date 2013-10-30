@@ -3,14 +3,14 @@
 //===============================================================================
 .style-guide{
   .image-container{
-    border: 1px solid darken($paper, 10);
+    background: which-pebble($pc-pink, $it-blue);
     display: inline-block;
-    padding: 15px;
-    color: lighten( $ink, 20 );
+    padding: 30px 30px 25px;
+    color: white;
     font-weight: 700;
 
     span{
-      margin-bottom: 0;
+      margin: 10px 0 0;
     }
   }
 

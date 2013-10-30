@@ -1,3 +1,95 @@
 //===============================================================================
 // MEDIA-QUERIES
 //===============================================================================
+// Navigation media query
+@media all and (min-width: 600px) {
+  .site-header {
+    height: $header-height-large;
+    padding: 0 18px;
+  }
+
+  .site-logo-container{
+    height: $header-height-large;
+  }
+
+  .site-logo{
+    padding: 14px 12px 10px;
+  }
+
+  .site-logo-flip{
+    padding: 14px 12px 10px;
+  }
+
+  .nav-btn{
+    display: none;
+  }
+
+  .site-nav{
+    position: static;
+
+    ul{
+      display: block;
+    }
+
+    li{
+      float: left;
+    }
+
+    a{
+      display: inline-block;
+      height: $header-height-large;
+      text-decoration: none;
+      -webkit-perspective: -1000px;
+
+      &::after{
+        content: attr(data-page);
+        position: absolute;
+        font-weight: 300;
+        top: 0;
+        left: 0;
+        height: $header-height-large;
+        line-height: $header-height-large;
+        text-align: center;
+        background: which-pebble($pc-pink, $it-blue);
+        color: white;
+        width: 100%;
+        -webkit-transform-origin: 50% 0%;
+        -webkit-transform: rotateX(0deg);
+        transition: -webkit-transform .3s, background .3s;
+      }
+
+      &:hover{
+        &::after{
+          -webkit-transform: rotateX(-90deg);   
+          background: which-pebble(darken($pc-pink, 25), darken($it-blue, 15));
+        }
+        span{
+          -webkit-transform: rotateX(0deg);
+          background: which-pebble(lighten($pc-pink, 5), lighten($it-blue, 5));
+        }
+      }
+    }
+
+    span{
+      color: white;
+      font-size: 20px;
+      line-height: $header-height-large - 1px;
+      height: $header-height-large;
+      font-weight: 700;
+      padding: 0 12px;
+      display: inline-block;
+      background: which-pebble($pc-pink, $it-blue);
+      -webkit-transform-origin: 50% 100%;
+      -webkit-transform: rotateX(-90deg);
+      transition: -webkit-transform .3s, background .3s;
+    }
+
+    li{
+      position: relative;
+
+      &:first-child {
+        margin-left: 0;
+      }
+    } 
+  } // end .site-nav
+} 

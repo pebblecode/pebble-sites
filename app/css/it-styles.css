@@ -548,42 +548,64 @@ h1, h2, h3, h4, h5, h6 {
 .site-header {
   background: #0099e6;
   width: 100%;
-  height: 60px;
+  height: 40px;
   position: fixed;
   top: 0;
-  padding: 0 1em;
+  padding-left: 6px;
+  transition: height .15s;
+}
+/* line 13, /Users/markdurrant/repos/pebble-sites/app/sass/_header.scss */
+.site-header::before {
+  content: '';
+  position: fixed;
+  top: 100%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transition: top .15s;
+  background: rgba(233, 34, 94, 0.25);
+}
+/* line 24, /Users/markdurrant/repos/pebble-sites/app/sass/_header.scss */
+.site-header.expanded {
+  height: 140px;
+}
+/* line 27, /Users/markdurrant/repos/pebble-sites/app/sass/_header.scss */
+.site-header.expanded::before {
+  top: 140px;
 }
 
-/* line 13, /Users/markdurrant/repos/pebble-sites/app/sass/_header.scss */
+/* line 33, /Users/markdurrant/repos/pebble-sites/app/sass/_header.scss */
 .site-logo-container {
   display: inline-block;
-  height: 60px;
+  height: 40px;
   text-decoration: none;
   -webkit-perspective: -1000px;
-  position: relative;
+  position: absolute;
+  bottom: 0;
+  z-index: 999;
 }
-/* line 21, /Users/markdurrant/repos/pebble-sites/app/sass/_header.scss */
+/* line 43, /Users/markdurrant/repos/pebble-sites/app/sass/_header.scss */
 .site-logo-container:hover .site-logo {
   -webkit-transform: rotateX(-90deg);
   background: #00669a;
 }
-/* line 26, /Users/markdurrant/repos/pebble-sites/app/sass/_header.scss */
+/* line 48, /Users/markdurrant/repos/pebble-sites/app/sass/_header.scss */
 .site-logo-container:hover .site-logo-flip {
   -webkit-transform: rotateX(0deg);
   background: #00aaff;
 }
 
-/* line 33, /Users/markdurrant/repos/pebble-sites/app/sass/_header.scss */
+/* line 55, /Users/markdurrant/repos/pebble-sites/app/sass/_header.scss */
 .site-logo {
-  padding: 12px;
+  padding: 9px 6px 8px;
   height: 100%;
   -webkit-transform-origin: 50% 0%;
   transition: -webkit-transform .3s, background .3s;
 }
 
-/* line 40, /Users/markdurrant/repos/pebble-sites/app/sass/_header.scss */
+/* line 62, /Users/markdurrant/repos/pebble-sites/app/sass/_header.scss */
 .site-logo-flip {
-  padding: 12px;
+  padding: 9px 6px 8px;
   height: 100%;
   -webkit-transform-origin: 50% 100%;
   -webkit-transform: rotateX(-90deg);
@@ -593,61 +615,71 @@ h1, h2, h3, h4, h5, h6 {
   left: 0;
 }
 
-/* line 52, /Users/markdurrant/repos/pebble-sites/app/sass/_header.scss */
-.site-nav a {
-  display: inline-block;
-  height: 60px;
-  text-decoration: none;
-  -webkit-perspective: -1000px;
-}
-/* line 58, /Users/markdurrant/repos/pebble-sites/app/sass/_header.scss */
-.site-nav a::after {
-  content: attr(data-page);
+/* line 73, /Users/markdurrant/repos/pebble-sites/app/sass/_header.scss */
+.nav-btn {
+  text-indent: -99999px;
+  height: 40px;
+  width: 40px;
+  margin: 0;
   position: absolute;
-  font-weight: 300;
-  top: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 999;
+  background: url("../img/menu-btn.svg") no-repeat 7px 7px;
+}
+/* line 84, /Users/markdurrant/repos/pebble-sites/app/sass/_header.scss */
+.nav-btn:hover {
+  background-color: #ee5080;
+}
+/* line 88, /Users/markdurrant/repos/pebble-sites/app/sass/_header.scss */
+.nav-btn:focus {
+  outline: none;
+}
+
+/* line 95, /Users/markdurrant/repos/pebble-sites/app/sass/_header.scss */
+.site-nav ul {
+  position: absolute;
+  top: -120px;
   left: 0;
-  height: 60px;
-  line-height: 60px;
-  text-align: center;
-  background: #0099e6;
-  color: white;
   width: 100%;
-  -webkit-transform-origin: 50% 0%;
-  -webkit-transform: rotateX(0deg);
-  transition: -webkit-transform .3s, background .3s;
 }
-/* line 76, /Users/markdurrant/repos/pebble-sites/app/sass/_header.scss */
-.site-nav a:hover::after {
-  -webkit-transform: rotateX(-90deg);
-  background: #00669a;
-}
-/* line 80, /Users/markdurrant/repos/pebble-sites/app/sass/_header.scss */
-.site-nav a:hover span {
-  -webkit-transform: rotateX(0deg);
-  background: #00aaff;
-}
-/* line 87, /Users/markdurrant/repos/pebble-sites/app/sass/_header.scss */
-.site-nav span {
-  color: white;
-  font-size: 20px;
-  line-height: 59px;
-  height: 60px;
-  font-weight: 700;
-  padding: 0 12px;
-  display: inline-block;
-  background: #0099e6;
-  -webkit-transform-origin: 50% 100%;
-  -webkit-transform: rotateX(-90deg);
-  transition: -webkit-transform .3s, background .3s;
-}
-/* line 101, /Users/markdurrant/repos/pebble-sites/app/sass/_header.scss */
+/* line 102, /Users/markdurrant/repos/pebble-sites/app/sass/_header.scss */
 .site-nav li {
   position: relative;
+  transition: left .20s .05s;
+  left: 100%;
 }
-/* line 104, /Users/markdurrant/repos/pebble-sites/app/sass/_header.scss */
-.site-nav li:first-child {
-  margin-left: 0;
+/* line 107, /Users/markdurrant/repos/pebble-sites/app/sass/_header.scss */
+.site-nav li:nth-child(2) {
+  transition: left .20s .1s;
+}
+/* line 110, /Users/markdurrant/repos/pebble-sites/app/sass/_header.scss */
+.site-nav li:nth-child(2) a {
+  margin-top: 1px;
+}
+/* line 115, /Users/markdurrant/repos/pebble-sites/app/sass/_header.scss */
+.site-nav li:nth-child(3) {
+  transition: left .20s .15s;
+}
+/* line 120, /Users/markdurrant/repos/pebble-sites/app/sass/_header.scss */
+.site-nav a {
+  color: white;
+  text-decoration: none;
+  display: block;
+  margin-right: 6px;
+  margin-top: 4px;
+  text-align: right;
+  font-weight: 300;
+  -webkit-font-smoothing: subpixel-antialiased;
+}
+
+/* line 133, /Users/markdurrant/repos/pebble-sites/app/sass/_header.scss */
+.site-header.expanded .site-nav ul {
+  top: 0;
+}
+/* line 137, /Users/markdurrant/repos/pebble-sites/app/sass/_header.scss */
+.site-header.expanded .site-nav li {
+  left: 0;
 }
 
 /* line 4, /Users/markdurrant/repos/pebble-sites/app/sass/_footer.scss */
@@ -659,17 +691,113 @@ h1, h2, h3, h4, h5, h6 {
   width: 100%;
 }
 
+@media all and (min-width: 600px) {
+  /* line 6, /Users/markdurrant/repos/pebble-sites/app/sass/_media-queries.scss */
+  .site-header {
+    height: 60px;
+    padding: 0 18px;
+  }
+
+  /* line 11, /Users/markdurrant/repos/pebble-sites/app/sass/_media-queries.scss */
+  .site-logo-container {
+    height: 60px;
+  }
+
+  /* line 15, /Users/markdurrant/repos/pebble-sites/app/sass/_media-queries.scss */
+  .site-logo {
+    padding: 14px 12px 10px;
+  }
+
+  /* line 19, /Users/markdurrant/repos/pebble-sites/app/sass/_media-queries.scss */
+  .site-logo-flip {
+    padding: 14px 12px 10px;
+  }
+
+  /* line 23, /Users/markdurrant/repos/pebble-sites/app/sass/_media-queries.scss */
+  .nav-btn {
+    display: none;
+  }
+
+  /* line 27, /Users/markdurrant/repos/pebble-sites/app/sass/_media-queries.scss */
+  .site-nav {
+    position: static;
+  }
+  /* line 30, /Users/markdurrant/repos/pebble-sites/app/sass/_media-queries.scss */
+  .site-nav ul {
+    display: block;
+  }
+  /* line 34, /Users/markdurrant/repos/pebble-sites/app/sass/_media-queries.scss */
+  .site-nav li {
+    float: left;
+  }
+  /* line 38, /Users/markdurrant/repos/pebble-sites/app/sass/_media-queries.scss */
+  .site-nav a {
+    display: inline-block;
+    height: 60px;
+    text-decoration: none;
+    -webkit-perspective: -1000px;
+  }
+  /* line 44, /Users/markdurrant/repos/pebble-sites/app/sass/_media-queries.scss */
+  .site-nav a::after {
+    content: attr(data-page);
+    position: absolute;
+    font-weight: 300;
+    top: 0;
+    left: 0;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    background: #0099e6;
+    color: white;
+    width: 100%;
+    -webkit-transform-origin: 50% 0%;
+    -webkit-transform: rotateX(0deg);
+    transition: -webkit-transform .3s, background .3s;
+  }
+  /* line 62, /Users/markdurrant/repos/pebble-sites/app/sass/_media-queries.scss */
+  .site-nav a:hover::after {
+    -webkit-transform: rotateX(-90deg);
+    background: #00669a;
+  }
+  /* line 66, /Users/markdurrant/repos/pebble-sites/app/sass/_media-queries.scss */
+  .site-nav a:hover span {
+    -webkit-transform: rotateX(0deg);
+    background: #00aaff;
+  }
+  /* line 73, /Users/markdurrant/repos/pebble-sites/app/sass/_media-queries.scss */
+  .site-nav span {
+    color: white;
+    font-size: 20px;
+    line-height: 59px;
+    height: 60px;
+    font-weight: 700;
+    padding: 0 12px;
+    display: inline-block;
+    background: #0099e6;
+    -webkit-transform-origin: 50% 100%;
+    -webkit-transform: rotateX(-90deg);
+    transition: -webkit-transform .3s, background .3s;
+  }
+  /* line 87, /Users/markdurrant/repos/pebble-sites/app/sass/_media-queries.scss */
+  .site-nav li {
+    position: relative;
+  }
+  /* line 90, /Users/markdurrant/repos/pebble-sites/app/sass/_media-queries.scss */
+  .site-nav li:first-child {
+    margin-left: 0;
+  }
+}
 /* line 5, /Users/markdurrant/repos/pebble-sites/app/sass/_style-guide.scss */
 .style-guide .image-container {
-  border: 1px solid #e0e2e6;
+  background: #0099e6;
   display: inline-block;
-  padding: 15px;
-  color: #a1a8b2;
+  padding: 30px 30px 25px;
+  color: white;
   font-weight: 700;
 }
 /* line 12, /Users/markdurrant/repos/pebble-sites/app/sass/_style-guide.scss */
 .style-guide .image-container span {
-  margin-bottom: 0;
+  margin: 10px 0 0;
 }
 /* line 17, /Users/markdurrant/repos/pebble-sites/app/sass/_style-guide.scss */
 .style-guide span {

@@ -4,7 +4,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title>pebble{code}</title>
     <meta name="description" content="">
-    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
     <!-- typekit stuff -->
     <script type="text/javascript" src="//use.typekit.net/jgz5xsv.js"></script>
@@ -15,7 +15,7 @@
   </head>
   <body>
 
-    <header class="site-header clear-fix">
+    <header class="site-header clear-fix expanded">
     
     </header> <!-- end .site-header -->
 
@@ -38,13 +38,19 @@
     <!-- grunt handlebars template -->
     <script type='text/javascript' src='js/templates.js'></script>
 
-    <script src="js/main.js"></script>
-
-    <!-- pebble{code} specific JS -->
+    <!-- pebble{code} template -->
     <script text='text/javascript'>
+      function buildTemplate ( template, data, element ) {
+        $.getJSON( data, function( json ) {
+          $( element ).append( JST[ template ] ( json ) );
+        });
+      }
+
       buildTemplate( 'app/templates/style-guide.hbs', 'data/code-styles.json', '.wrap');
       buildTemplate( 'app/templates/header.hbs', 'data/code-header.json', '.site-header');
     </script>
+
+    <script src="js/main.js"></script>
     
   </body>
 </html>
