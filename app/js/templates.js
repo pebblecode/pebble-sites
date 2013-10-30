@@ -24,7 +24,11 @@ function program1(depth0,data) {
   return buffer;
   }
 
-  buffer += "<a href=\"index.html\" class=\"logo left\">\n  <img src=\"";
+  buffer += "<a href=\"index.html\" class=\"site-logo-container left\">\n  <img class=\"site-logo\" src=\"";
+  if (stack1 = helpers.logo) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.logo; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "\">\n  <img class=\"site-logo-flip\" src=\"";
   if (stack1 = helpers.logo) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
   else { stack1 = depth0.logo; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
   buffer += escapeExpression(stack1)

@@ -8,10 +8,44 @@
   position: fixed;
   top: 0;
   padding: 0 1em;
+}
 
-  img {
-    height: $header-height;
+.site-logo-container{
+  display: inline-block;
+  height: $header-height;
+  text-decoration: none;
+  -webkit-perspective: -1000px;
+  position: relative;
+
+  &:hover{
+    .site-logo{
+      -webkit-transform: rotateX(-90deg);   
+      background: which-pebble(darken($pc-pink, 15), darken($it-blue, 15));
+    }
+
+    .site-logo-flip{
+      -webkit-transform: rotateX(0deg);
+      background: which-pebble(lighten($pc-pink, 5), lighten($it-blue, 5));
+    }
   }
+}
+
+.site-logo{
+  padding: 12px;
+  height: 100%;
+  -webkit-transform-origin: 50% 0%;
+  transition: -webkit-transform .3s, background .3s;
+}
+
+.site-logo-flip{
+  padding: 12px;
+  height: 100%;
+  -webkit-transform-origin: 50% 100%;
+  -webkit-transform: rotateX(-90deg);
+  transition: -webkit-transform .3s, background .3s;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .site-nav{
