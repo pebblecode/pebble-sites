@@ -68,6 +68,9 @@ module.exports = function (grunt) {
       gruntfile: {
         src: ['Gruntfile.js']
       },
+      data: {
+        src: ['app/data/*.json']
+      },
       js: {
         src: ['app/js/*.js', 'test/**/*.js', '!app/js/templates.js']
       }
@@ -92,6 +95,12 @@ module.exports = function (grunt) {
       css: {
         files: 'app/sass/*.scss',
         tasks: ['sass']
+      },
+      data: {
+        files: '<%= jshint.data.src %>',
+        options: {
+          livereload: true
+        }
       },
       html: {
         files: ['app/*.html', 'app/css/*.css'],
