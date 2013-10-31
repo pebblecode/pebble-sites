@@ -709,7 +709,6 @@ h1, h2, h3, h4, h5, h6 {
 .homepage-head h1,
 .homepage-head h2 {
   color: white;
-  opacity: 0;
 }
 /* line 34, /Users/markdurrant/repos/pebble-sites/app/sass/_homepage.scss */
 .homepage-head h1 {
