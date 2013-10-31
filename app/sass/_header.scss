@@ -7,8 +7,9 @@
   height: $header-height-small;
   position: fixed;
   top: 0;
-  padding-left: 6px;
+  padding-left: 2px;
   transition: height .15s;
+  z-index: 999;
 
   &::before{
     content: '';
@@ -18,14 +19,14 @@
     right: 0;
     bottom: 0;
     transition: top .15s;
-    background: fade-out(darken($pc-pink, 10), .75);
+    background: which-pebble(fade-out(darken($pc-pink, 25), .70), fade-out(darken($it-blue, 10), .75));
   }
 
   &.expanded{
-    height: 140px;
+    height: 158px;
 
     &::before{
-      top: 140px;
+      top: 158px;
     }
   }
 }
@@ -38,18 +39,6 @@
   position: absolute;
   bottom: 0;
   z-index: 999;
-
-  &:hover{
-    .site-logo{
-      -webkit-transform: rotateX(-90deg);   
-      background: which-pebble(darken($pc-pink, 25), darken($it-blue, 15));
-    }
-
-    .site-logo-flip{
-      -webkit-transform: rotateX(0deg);
-      background: which-pebble(lighten($pc-pink, 5), lighten($it-blue, 5));
-    }
-  }
 }
 
 .site-logo{
@@ -82,7 +71,7 @@
   background: url('../img/menu-btn.svg') no-repeat 7px 7px;
 
   &:hover{
-    background-color: $pc-pink;
+    background-color: which-pebble($pc-pink, $it-blue);
   }
 
   &:focus{
@@ -97,23 +86,21 @@
     top: -120px;
     left: 0;
     width: 100%;
+    padding-top: 5px;
   }
 
   li{
     position: relative;
-    transition: left .20s .05s;
+    transition: left .20s .075s;
     left: 100%;
+    height: 37px;
 
     &:nth-child(2){
-      transition: left .20s .1s;
-
-      a{
-        margin-top: 1px;
-      }
+      transition: left .20s .125s;
     }
 
     &:nth-child(3){
-      transition: left .20s .15s;
+      transition: left .20s .2s;
     }
   }
 
@@ -121,12 +108,14 @@
     color: white;
     text-decoration: none;
     display: block;
-    margin-right: 6px;
-    margin-top: 4px;
+    width: 90px;
+    padding: 0 6px 5px 0;
     text-align: right;
-    font-weight: 300;
-    -webkit-font-smoothing: subpixel-antialiased;
-  }  
+    font-size: 18px;
+    border-bottom: 2px solid white;
+    position: absolute;
+    right: 6px;
+  }
 }
 
 .site-header.expanded .site-nav{
@@ -136,8 +125,5 @@
 
   li{
     left: 0;
-  }
-
-  a{
   }
 }
