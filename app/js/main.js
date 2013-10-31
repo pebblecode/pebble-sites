@@ -10,7 +10,6 @@ $('.nav-btn').click( function() {
 $( window ).resize(function(event) {
   if ( $(window).width() > 600 ) {
     $('.site-header').removeClass('expanded');
-    console.log('over 600');
   }
 });
 

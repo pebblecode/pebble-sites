@@ -39,6 +39,32 @@ function program1(depth0,data) {
   return buffer;
   });
 
+this["JST"]["app/templates/homepage.hbs"] = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [4,'>= 1.0.0'];
+helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
+  var buffer = "", stack1, functionType="function", escapeExpression=this.escapeExpression;
+
+
+  buffer += "<header class=\"homepage-head\">\n  <h1 class=\"call-out\">";
+  if (stack1 = helpers.headline) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.headline; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</h1>\n  <h2 class=\"mega\">";
+  if (stack1 = helpers['sub-head']) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0['sub-head']; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</h2>\n</header>\n<a href=\"\" class=\"cta-container\">\n  <span>";
+  if (stack1 = helpers['cta-1']) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0['cta-1']; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</span>\n  <span>";
+  if (stack1 = helpers['cta-2']) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0['cta-2']; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</span>\n  <span class=\"cta-help\"></span>\n</a>\n<div class=\"testamonials\">\n</div>";
+  return buffer;
+  });
+
 this["JST"]["app/templates/style-guide.hbs"] = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
   this.compilerInfo = [4,'>= 1.0.0'];
 helpers = this.merge(helpers, Handlebars.helpers); data = data || {};

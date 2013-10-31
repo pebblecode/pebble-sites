@@ -2,7 +2,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>pebble{code}</title>
+    <title>pebble.it</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
@@ -10,19 +10,17 @@
     <script type="text/javascript" src="//use.typekit.net/jgz5xsv.js"></script>
     <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 
-    <link rel="stylesheet" href="css/code-styles.css">
+    <link rel="stylesheet" href="css/it-styles.css">
 
   </head>
-  <body class="homepage-body">
+  <body>
 
     <header class="site-header clear-fix">
-    
+        
     </header> <!-- end .site-header -->
 
     <div class="wrap">
       
-      
-
     </div> <!-- end. wrap -->
 
     <footer class="site-footer">
@@ -38,19 +36,19 @@
     <!-- grunt handlebars template -->
     <script type='text/javascript' src='js/templates.js'></script>
 
-    <!-- pebble{code} template -->
-    <script text='text/javascript'>
+    <!-- pebble.it templating -->
+    <script>
       function buildTemplate ( template, data, element ) {
         $.getJSON( data, function( json ) {
           $( element ).append( JST[ template ] ( json ) );
         });
       }
 
-      buildTemplate( 'app/templates/homepage.hbs', 'data/code-homepage.json', '.wrap');
-      buildTemplate( 'app/templates/header.hbs', 'data/code-header.json', '.site-header');
+      buildTemplate( 'app/templates/header.hbs', 'data/it-header.json', '.site-header');
+      buildTemplate( 'app/templates/style-guide.hbs', 'data/it-styles.json', '.wrap');
     </script>
 
     <script src="js/main.js"></script>
-    
+
   </body>
 </html>
