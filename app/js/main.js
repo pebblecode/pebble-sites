@@ -7,4 +7,11 @@ $('.nav-btn').click( function() {
   console.log('nav-clicked');
 });
 
+$( window ).resize(function(event) {
+  if ( $(window).width() > 600 ) {
+    $('.site-header').removeClass('expanded');
+    console.log('over 600');
+  }
+});
+
 });
