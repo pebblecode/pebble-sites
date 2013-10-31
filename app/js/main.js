@@ -13,4 +13,8 @@ $( window ).resize(function(event) {
   }
 });
 
+$( window ).scroll( function() {
+  $( '.homepage-head' ).css( 'background-position', '0 ' + ( $( window ).scrollTop() - 60) + 'px');
+});
+
 });
