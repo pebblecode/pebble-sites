@@ -75,11 +75,15 @@ function program1(depth0,data) {
   if (stack1 = helpers['sub-head']) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
   else { stack1 = depth0['sub-head']; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
   buffer += escapeExpression(stack1)
-    + "</h2>\n</header>\n<a href=\"\" class=\"cta-container\">\n  <span>";
+    + "</h2>\n</header>\n<a href=\"\" class=\"cta-container\">\n  <span class=\"block-1\">";
   if (stack1 = helpers['cta-1']) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
   else { stack1 = depth0['cta-1']; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
   buffer += escapeExpression(stack1)
-    + "</span>\n  <span>";
+    + "</span>\n  <span class=\"block-2\" data-text=\"";
+  if (stack1 = helpers['cta-3']) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0['cta-3']; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "\">";
   if (stack1 = helpers['cta-2']) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
   else { stack1 = depth0['cta-2']; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
   buffer += escapeExpression(stack1)

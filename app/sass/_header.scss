@@ -35,7 +35,7 @@
   display: inline-block;
   height: $header-height-small;
   text-decoration: none;
-  -webkit-perspective: -1000px;
+  -webkit-perspective: 1000px;
   position: absolute;
   bottom: 0;
   z-index: 999;
