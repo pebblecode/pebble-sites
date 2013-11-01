@@ -5,7 +5,7 @@ module.exports = function (grunt) {
   var port = grunt.option('port') || 7770,
     appBase = "app",
     hostname = "0.0.0.0",
-    liveReloadPort = grunt.option('lrp') || 35729;;
+    liveReloadPort = grunt.option('lrp') || 35729;
 
   // For livereload
   function addLiveReloadMiddleware(connect, options) {
