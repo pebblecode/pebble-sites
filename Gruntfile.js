@@ -3,12 +3,16 @@ module.exports = function (grunt) {
   'use strict';
 
   var port = grunt.option('port') || 7770,
-    appBase = "app";
+    appBase = "app",
+    hostname = "0.0.0.0",
+    liveReloadPort = grunt.option('lrp') || 35729;;
 
   // For livereload
-  function addLivereloadMiddleware(connect, options) {
+  function addLiveReloadMiddleware(connect, options) {
     var path = require('path'),
-      lrSnippet = require('grunt-contrib-livereload/lib/utils').livereloadSnippet,
+      lrSnippet = require('connect-livereload')({
+        port: liveReloadPort
+      }),
       folderMount = function folderMount(connect, point) {
         return connect['static'](path.resolve(point));
       };
@@ -41,10 +45,10 @@ module.exports = function (grunt) {
     connect: {
       livereload: {
         options: {
-          hostname: '0.0.0.0',
+          hostname: hostname,
           port: port,
           base: appBase,
-          middleware: addLivereloadMiddleware
+          middleware: addLiveReloadMiddleware
         }
       }
     },
@@ -89,7 +93,7 @@ module.exports = function (grunt) {
         files: ['app/js/*.js', '!app/js/templates.js'],
         tasks: ['jshint'],
         options: {
-          livereload: true
+          livereload: liveReloadPort
         }
       },
       css: {
@@ -99,20 +103,20 @@ module.exports = function (grunt) {
       data: {
         files: '<%= jshint.data.src %>',
         options: {
-          livereload: true
+          livereload: liveReloadPort
         }
       },
       html: {
         files: ['app/*.html', 'app/css/*.css'],
         options: {
-          livereload: true
+          livereload: liveReloadPort
         }
       },
       handlebars: {
         files: ["app/templates/**/*.hbs"],
         tasks: ['handlebars'],
         options: {
-          livereload: true
+          livereload: liveReloadPort
         }
       }
     },
