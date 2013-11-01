@@ -4,9 +4,13 @@
 .homepage-body{
   background: 0;
 
+  .wrap{
+    padding-bottom: 0;
+  }
+
   &::before{
     content: '';
-    background-image: url('../img/homepage-bg.jpg');
+    background-image: which-pebble( url('../img/code-homepage-bg.jpg'), url('../img/it-homepage-bg.jpg'));
     background-size: cover;
     position: fixed;
     top: 0;
@@ -18,9 +22,8 @@
 }
 
 .homepage-head{
-  background-image: url('../img/homepage-bg.jpg');
+  background-image: which-pebble( url('../img/code-homepage-bg.jpg'), url('../img/it-homepage-bg.jpg'));
   background-size: cover;
-  // top: $header-height-large;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   padding: 60px 60px 100px;
@@ -58,7 +61,7 @@
 .cta-container{
   display: none;
   display: block;
-  margin: 120px auto;
+  margin: 180px auto;
   width: 740px;
   background: white;
   text-decoration: none;
@@ -67,6 +70,31 @@
 
   span{
     display: block;
-    // padding: 30px;
+  }
+}
+
+.testamonials-container {
+  background: $paper;
+  padding: 120px 0 240px;
+
+  ul{
+    width: 95%;
+    margin: 0 auto;
+  }
+
+  li{
+    width: 33.3333%;
+    padding: 0 3%;
+  }
+
+  span{
+    font-weight: 700;
+  }
+
+  .title {
+    font-weight: 300;
+  }
+  .company{
+    display: block;
   }
 }

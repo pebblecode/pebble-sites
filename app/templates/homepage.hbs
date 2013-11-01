@@ -7,5 +7,15 @@
   <span>{{cta-2}}</span>
   <span class="cta-help"></span>
 </a>
-<div class="testamonials">
+<div class="testamonials-container">
+  <ul class="clear-fix">
+    {{#each testimonials}}
+      <li class="left">
+        <div class="text">{{{text}}}</div>
+        <span class="client">{{client}}</span>
+        <span class="title">{{title}}</span>
+        <span class="company">{{company}}</span>
+      </li>
+    {{/each}}
+  </ul>
 </div>
