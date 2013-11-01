@@ -31,7 +31,7 @@
   background-position: 0 -60px;
 
   &::before{
-    background: $code-head;
+    background: which-pebble($code-head, $it-head);
     content: '';
     position: absolute;
     top: 0;
@@ -48,11 +48,12 @@
   }
 
   h1{
-    font-size: 90px;
+    font-size: 108px;
     margin: 60px 0 0;
   }
 
   h2{
+    font-size: 49px;
     line-height: 1.1;
     font-weight: 300;
   }
@@ -84,7 +85,7 @@
   .block-1,
   .block-2{
     display: block;
-    font-size: 44px;
+    font-size: which-pebble(44px, 57px);
     line-height: 1.2;
     position: relative;
   }
@@ -95,9 +96,9 @@
     -webkit-perspective: 1000px;
 
     &::after{
-      background-image: url('../img/hack-icons.svg');
+      background-image: which-pebble(url('../img/hack-icons.svg'), url('../img/device-icons.svg'));
       background-repeat: no-repeat;
-      background-position: center;
+      background-position: center bottom;
       -webkit-transform-origin: 0 50%;
       -webkit-transform: rotateY(180deg);
       transition: -webkit-transform .2s;
@@ -107,7 +108,7 @@
       left: 0;
       bottom: 0;
       right: 0;
-      background-color: $code-head;
+      background-color: which-pebble($code-head, $it-head);
     }
   }
 
@@ -131,7 +132,7 @@
       left: 0;
       bottom: 0;
       right: 0;
-      background: $code-head;
+      background: which-pebble($code-head, $it-head);
 
     }
   }

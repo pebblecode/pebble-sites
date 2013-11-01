@@ -4,6 +4,10 @@
 .style-guide{
   padding: 1px 60px 120px;
 
+  p, pre{
+    max-width: 66.66%;
+  }
+
   .image-container{
     background: which-pebble($pc-pink, $it-blue);
     display: inline-block;

@@ -1,27 +1,22 @@
 {
-  "headline": "We future-proof your business with our technology",
-  "sub-head": "We get our kicks from solving most complex business problems out there. The harder the better.",
-  "cta-1": "Take your first step along The Pebble Way today",
-  "cta-2": "Book your Hack Day with us here",
-  "cta-help": "It all starts with a Hack Day - that you the client and our best brains in a room for a day. At the end of it we’ll have frantically worked through your most pressing problems, generating loads of ideas and turning one into a working prototype. All in 12hrs!",
+  "headline": "We future-proof the technology in your business",
+  "sub-head": "We take the worry and hassle out of IT providing support and consultancy for creative businesses.",
+  "cta-1": "Start making life simpler today the Pebble Way",
+  "cta-2": "book your Free Consultancy here now",
+  "cta-3": "Book A Consultation",
+  "cta-help": "It all starts with a visit from Paul and his team - for free you’ll get our written proposal that will outline the next steps to take your IT to a better, simpler place leaving you free to get on with the stuff your actually interested in!",
   "testimonials": [
     {
-      "text": "pebble {code} has been, and will continue to be, an integral part of delivering software for our business. Whether it be complex back end integrations on high throughput multiplayer games for the browser, tablet or mobile, pebble has always delivered fantastic results. I couldn't recommend them highly enough.",
-      "client": "Michael Brady",
-      "title": "CEO",
-      "company": "bede gaming"
+      "text": "<p>Working with <span>pebble.it</span> has been both pleasurable and painless; two words not commonly associated with company IT needs. Their rates are competitive and they work quickly, effectively and without fuss. We wholeheartedly recommend their services.</p>",
+      "company": "Vigilance Properties"
     },
     {
-      "text": "The pebble {code} JavaScript team initially delivered a JavaScript messaging layer for our HTML5 Bingo product.Over time their involvement increased and Bede Gaming now work closely with a dedicated team of pebble {code} developers to deliver a suite of complex browser based games and services. One of the major successes has been a gaming framework based on Backbone.js and Marionette.js that delivers significant value to the Business.",
-      "client": "Darryl Haydn Jones",
-      "title": "Head of Product Delivery",
-      "company": "bede gaming"
+      "text": "<p><span>pebble.it</span> was our first experience of outsourcing IT having previously had a dedicated one or two man team in house. Any nervousness about having remote support disappeared within hours of them starting - with the slickest ticketing system, friendly and engaged support engineers and an incredibly impressive response time to more urgent requests - they blew us away. Their Mac knowledge is deep - and their ability to diagnose and fix was swift. They also helped us plan ahead for upgrades and spend over the forthcoming year and took us from a good place in terms of infrastructure to a really solid place. The only reason we don't use them now is because we sold our business and the new owner has in house IT. It is no understatement to say we miss Pebble hugely.</p>",
+      "company": "FRUKT"
     },
     {
-      "text": "RecoAuto has entrusted development of its software platform to pebble {code} who have been an absolute pleasure to work with. The quality of their software is top notch and they have always come up with innovative solution to obstacles in the road. I would not hesitate to recommend their services.",
-      "client": "Geoff Wheeler",
-      "title": "Managing Director",
-      "company": "RecoAuto Limited"
+      "text": "<p><span>pebble.it</span> are our trusted partner and support us not only on important day-to-day tasks but the strategical direction of our IT infrastructure and capabilities.</p>",
+      "company": "Moving Brands"
     }
   ]
 }
