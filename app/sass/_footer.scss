@@ -2,7 +2,7 @@
 // FOOTER
 //===============================================================================
 .site-footer {
-  background: #BBB;
+  background: darken($paper, 6);
   position: absolute;
   bottom: 0;
   height: $footer-height;

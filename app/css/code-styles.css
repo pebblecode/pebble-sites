@@ -675,7 +675,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* line 4, /Users/markdurrant/repos/pebble-sites/app/sass/_footer.scss */
 .site-footer {
-  background: #BBB;
+  background: #f0f0f0;
   position: absolute;
   bottom: 0;
   height: 100px;
@@ -687,9 +687,13 @@ h1, h2, h3, h4, h5, h6 {
   background: 0;
 }
 /* line 7, /Users/markdurrant/repos/pebble-sites/app/sass/_homepage.scss */
+.homepage-body .wrap {
+  padding-bottom: 0;
+}
+/* line 11, /Users/markdurrant/repos/pebble-sites/app/sass/_homepage.scss */
 .homepage-body::before {
   content: '';
-  background-image: url("../img/homepage-bg.jpg");
+  background-image: url("../img/code-homepage-bg.jpg");
   background-size: cover;
   position: fixed;
   top: 0;
@@ -699,9 +703,9 @@ h1, h2, h3, h4, h5, h6 {
   z-index: -1;
 }
 
-/* line 20, /Users/markdurrant/repos/pebble-sites/app/sass/_homepage.scss */
+/* line 24, /Users/markdurrant/repos/pebble-sites/app/sass/_homepage.scss */
 .homepage-head {
-  background-image: url("../img/homepage-bg.jpg");
+  background-image: url("../img/code-homepage-bg.jpg");
   background-size: cover;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -709,7 +713,7 @@ h1, h2, h3, h4, h5, h6 {
   position: relative;
   background-position: 0 -60px;
 }
-/* line 30, /Users/markdurrant/repos/pebble-sites/app/sass/_homepage.scss */
+/* line 33, /Users/markdurrant/repos/pebble-sites/app/sass/_homepage.scss */
 .homepage-head::before {
   background: #4A5A70;
   content: '';
@@ -720,35 +724,63 @@ h1, h2, h3, h4, h5, h6 {
   height: 100%;
   z-index: -1;
 }
-/* line 42, /Users/markdurrant/repos/pebble-sites/app/sass/_homepage.scss */
+/* line 45, /Users/markdurrant/repos/pebble-sites/app/sass/_homepage.scss */
 .homepage-head h1,
 .homepage-head h2 {
   color: white;
 }
-/* line 47, /Users/markdurrant/repos/pebble-sites/app/sass/_homepage.scss */
+/* line 50, /Users/markdurrant/repos/pebble-sites/app/sass/_homepage.scss */
 .homepage-head h1 {
   font-size: 90px;
   margin: 60px 0 0;
 }
-/* line 52, /Users/markdurrant/repos/pebble-sites/app/sass/_homepage.scss */
+/* line 55, /Users/markdurrant/repos/pebble-sites/app/sass/_homepage.scss */
 .homepage-head h2 {
   line-height: 1.1;
   font-weight: 300;
 }
 
-/* line 58, /Users/markdurrant/repos/pebble-sites/app/sass/_homepage.scss */
+/* line 61, /Users/markdurrant/repos/pebble-sites/app/sass/_homepage.scss */
 .cta-container {
   display: none;
   display: block;
-  margin: 120px auto;
+  margin: 180px auto;
   width: 740px;
   background: white;
   text-decoration: none;
   font-size: 30px;
   padding: 30px;
 }
-/* line 68, /Users/markdurrant/repos/pebble-sites/app/sass/_homepage.scss */
+/* line 71, /Users/markdurrant/repos/pebble-sites/app/sass/_homepage.scss */
 .cta-container span {
+  display: block;
+}
+
+/* line 76, /Users/markdurrant/repos/pebble-sites/app/sass/_homepage.scss */
+.testamonials-container {
+  background: white;
+  padding: 120px 0 240px;
+}
+/* line 80, /Users/markdurrant/repos/pebble-sites/app/sass/_homepage.scss */
+.testamonials-container ul {
+  width: 95%;
+  margin: 0 auto;
+}
+/* line 85, /Users/markdurrant/repos/pebble-sites/app/sass/_homepage.scss */
+.testamonials-container li {
+  width: 33.3333%;
+  padding: 0 3%;
+}
+/* line 90, /Users/markdurrant/repos/pebble-sites/app/sass/_homepage.scss */
+.testamonials-container span {
+  font-weight: 700;
+}
+/* line 94, /Users/markdurrant/repos/pebble-sites/app/sass/_homepage.scss */
+.testamonials-container .title {
+  font-weight: 300;
+}
+/* line 97, /Users/markdurrant/repos/pebble-sites/app/sass/_homepage.scss */
+.testamonials-container .company {
   display: block;
 }
 

@@ -42,8 +42,30 @@ function program1(depth0,data) {
 this["JST"]["app/templates/homepage.hbs"] = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
   this.compilerInfo = [4,'>= 1.0.0'];
 helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
-  var buffer = "", stack1, functionType="function", escapeExpression=this.escapeExpression;
+  var buffer = "", stack1, functionType="function", escapeExpression=this.escapeExpression, self=this;
 
+function program1(depth0,data) {
+  
+  var buffer = "", stack1;
+  buffer += "\n      <li class=\"left\">\n        <div class=\"text\">";
+  if (stack1 = helpers.text) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.text; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "</div>\n        <span class=\"client\">";
+  if (stack1 = helpers.client) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.client; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</span>\n        <span class=\"title\">";
+  if (stack1 = helpers.title) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.title; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</span>\n        <span class=\"company\">";
+  if (stack1 = helpers.company) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.company; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</span>\n      </li>\n    ";
+  return buffer;
+  }
 
   buffer += "<header class=\"homepage-head\">\n  <h1 class=\"call-out\">";
   if (stack1 = helpers.headline) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
@@ -61,7 +83,10 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
   if (stack1 = helpers['cta-2']) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
   else { stack1 = depth0['cta-2']; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
   buffer += escapeExpression(stack1)
-    + "</span>\n  <span class=\"cta-help\"></span>\n</a>\n<div class=\"testamonials\">\n</div>";
+    + "</span>\n  <span class=\"cta-help\"></span>\n</a>\n<div class=\"testamonials-container\">\n  <ul class=\"clear-fix\">\n    ";
+  stack1 = helpers.each.call(depth0, depth0.testimonials, {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data});
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n  </ul>\n</div>";
   return buffer;
   });
 
