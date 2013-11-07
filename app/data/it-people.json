@@ -1,0 +1,67 @@
+{
+  "people": [
+    {
+      "name": "Seb Nash",
+      "title": "CTO & Co-founder",
+      "image": "img/mugs/seb.jpg",
+      "twitter": "http://twitter.com/sebbo"
+    },
+    {
+      "name": "Paul Addicott-Evans",
+      "title": "Managing Director",
+      "image": "img/mugs/paul.jpg",
+      "twitter": "http://twitter.com/elpabl0"
+    },
+    {
+      "name": "David Osen",
+      "title": "Operations Director",
+      "image": "img/mugs/david.jpg"
+    },
+    {
+      "name": "Graham Gilbert",
+      "title": "Lead Engineer",
+      "image": "img/mugs/graham.jpg",
+      "twitter": "http://twitter.com/grahamgilbert"
+    },
+    {
+      "name": "Simon Triggs",
+      "title": "Senior Tech Consultant",
+      "image": "img/mugs/simon.jpg",
+      "twitter": "http://twitter.com/simon_triggs"
+    },
+    {
+      "name": "James Ford",
+      "title": "Support Co-ordinator",
+      "image": "img/mugs/james.jpg",
+      "twitter": "http://twitter.com/fordy"
+    },
+    {
+      "name": "Will Stanway",
+      "title": "Tech Consultant",
+      "image": "img/mugs/will.jpg",
+      "twitter": "http://twitter.com/willstanway"
+    },
+    {
+      "name": "Barry Fivian",
+      "title": "Tech Consultant",
+      "image": "img/mugs/barry.jpg",
+      "twitter": "http://twitter.com/coppervglass"
+    },
+    {
+      "name": "Charlie Selwyn",
+      "title": "Tech Consultant",
+      "image": "img/mugs/charlie.jpg"
+    },
+    {
+      "name": "Francesca Galluzzo",
+      "title": "Administrator",
+      "image": "img/mugs/francesca.jpg"
+    },
+    {
+      "name": "Toby Hunt",
+      "title": "Co-founder",
+      "image": "img/mugs/toby.jpg",
+      "twitter": "http://twitter.com/tobyhunt"
+    }
+  ]
+}
