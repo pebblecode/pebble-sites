@@ -1,9 +1,0 @@
-{
-  "company": "pebble{code}",
-  "logo": "img/pc-logo.svg",
-  "pages": [
-    { "page": "work", "url": "code-work" },
-    { "page": "people", "url": "code-people"  },
-    { "page": "insights", "url": "code-insights"  }
-  ]
-}
