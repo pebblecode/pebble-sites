@@ -1,0 +1,43 @@
+// grunt configuration
+module.exports = function ( grunt ) {
+  // use strick mode for JS
+  'use strict';
+
+  // grunt config options
+  grunt.initConfig({
+    // read package.json
+    pkg: grunt.file.readJSON( 'package.json' ),
+
+    // assemble (static site generator) options
+    assemble: {
+      // shared options
+      options: {
+        layout: 'src/shared/templates/layouts/default.hbs',
+        flatten: true
+      },
+
+      // generate pebble {code} pages
+      codeSite: {
+        options: {
+          data: 'src/code/data/*.json'
+        },
+        files: {
+          'dist/code/': [ 'src/shared/templates/pages/*.hbs' ]
+        }
+      },
+
+      // generate pebble.it pages
+      itSite: {
+        options: {
+          data: 'src/it/data/*.json'
+        },
+        files: {
+          'dist/it/': [ 'src/shared/templates/pages/*.hbs' ]
+        }
+      }
+    }
+  });
+
+  grunt.loadNpmTasks( 'assemble' );
+  grunt.registerTask( 'default', [ 'assemble' ] );
+};

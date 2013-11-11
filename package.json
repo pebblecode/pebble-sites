@@ -1,0 +1,8 @@
+{
+  "name": "pebble-sites",
+  "version": "0.0.1",
+  "dependencies": {
+    "grunt": "~0.4.1",
+    "assemble": "~0.4.0"
+  }
+}
