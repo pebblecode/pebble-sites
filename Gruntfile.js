@@ -93,6 +93,13 @@ module.exports = function ( grunt ) {
           base: 'dist/'
         }
       }
+    },
+
+    // open browser on start
+    open: {
+      dev: {
+        path: 'http://localhost:8000'  
+      }
     }
   });
 
@@ -102,6 +109,7 @@ module.exports = function ( grunt ) {
   grunt.loadNpmTasks( 'grunt-contrib-sass' );
   grunt.loadNpmTasks( 'grunt-contrib-connect' );
   grunt.loadNpmTasks( 'grunt-contrib-copy' );
+  grunt.loadNpmTasks( 'grunt-open' );
 
-  grunt.registerTask( 'default', [ 'connect', 'watch' ] );
+  grunt.registerTask( 'default', [ 'connect', 'open', 'watch' ] );
 };
