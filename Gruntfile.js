@@ -51,18 +51,57 @@ module.exports = function ( grunt ) {
           style: 'expanded',
           lineNumbers: true
         },
-
         files: {
           'dist/code/css/styles.css': 'src/shared/sass/code-styles.scss',
           'dist/it/css/styles.css': 'src/shared/sass/it-styles.scss'
+        }
+      }
+    },
+
+    // watch for changes & complete task
+    watch: {
+      options: {
+        livereload: true
+      },
+      css: {
+        files: 'src/shared/sass/*.scss',
+        tasks: ['sass']
+      },
+      html: {
+        files: 'src/shared/templates/**/*.hbs',
+        tasks: ['clean', 'assemble']
+      },
+      copy: {
+        files: 'src/index.html',
+        tasks: ['copy']
+      }
+    },
+
+    // copy files to dist/
+    copy: {
+      main: {
+        src: 'src/index.html',
+        dest: 'dist/index.html'
+      }
+    },
+
+    // spin up local dev server
+    connect: {
+      server: {
+        options: {
+          port: 8000,
+          base: 'dist/'
         }
       }
     }
   });
 
   grunt.loadNpmTasks( 'assemble' );
+  grunt.loadNpmTasks( 'grunt-contrib-watch' );
   grunt.loadNpmTasks( 'grunt-contrib-clean' );
   grunt.loadNpmTasks( 'grunt-contrib-sass' );
+  grunt.loadNpmTasks( 'grunt-contrib-connect' );
+  grunt.loadNpmTasks( 'grunt-contrib-copy' );
 
-  grunt.registerTask( 'default', [ 'clean', 'assemble', 'sass' ] );
+  grunt.registerTask( 'default', [ 'connect', 'watch' ] );
 };
