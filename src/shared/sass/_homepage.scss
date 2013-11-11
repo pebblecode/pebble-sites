@@ -1,28 +1,19 @@
 //===============================================================================
 // HOMEPAGE
 //===============================================================================
-.homepage-body{
-  background: 0;
-
-  .wrap{
-    padding-bottom: 0;
-  }
-
-  &::before{
-    content: '';
-    background-image: which-pebble( url('../img/code-homepage-bg.jpg'), url('../img/it-homepage-bg.jpg'));
-    background-size: cover;
-    position: fixed;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    z-index: -1;
-  }
+.homepage-bg{
+  background-image: url('../img/homepage-bg.jpg');
+  background-size: cover;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
 }
 
 .homepage-head{
-  background-image: which-pebble( url('../img/code-homepage-bg.jpg'), url('../img/it-homepage-bg.jpg'));
+  background-image: url('../img/homepage-bg.jpg');
   background-size: cover;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
