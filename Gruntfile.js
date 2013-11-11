@@ -42,10 +42,27 @@ module.exports = function ( grunt ) {
     // clean up old html
     clean: {
       all: ['dist/**/*.html']
+    },
+
+    // compile Sass
+    sass: {
+      dist: {
+        options: {
+          style: 'expanded',
+          lineNumbers: true
+        },
+
+        files: {
+          'dist/code/css/styles.css': 'src/shared/sass/code-styles.scss',
+          'dist/it/css/styles.css': 'src/shared/sass/it-styles.scss'
+        }
+      }
     }
   });
 
   grunt.loadNpmTasks( 'assemble' );
   grunt.loadNpmTasks( 'grunt-contrib-clean' );
-  grunt.registerTask( 'default', [ 'clean', 'assemble' ] );
+  grunt.loadNpmTasks( 'grunt-contrib-sass' );
+
+  grunt.registerTask( 'default', [ 'clean', 'assemble', 'sass' ] );
 };
