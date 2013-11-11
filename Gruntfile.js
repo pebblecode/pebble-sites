@@ -37,9 +37,15 @@ module.exports = function ( grunt ) {
           'dist/it/': [ 'src/shared/templates/pages/*.hbs' ]
         }
       }
+    },
+
+    // clean up old html
+    clean: {
+      all: ['dist/**/*.html']
     }
   });
 
   grunt.loadNpmTasks( 'assemble' );
-  grunt.registerTask( 'default', [ 'assemble' ] );
+  grunt.loadNpmTasks( 'grunt-contrib-clean' );
+  grunt.registerTask( 'default', [ 'clean', 'assemble' ] );
 };
