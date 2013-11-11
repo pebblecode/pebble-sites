@@ -1,0 +1,28 @@
+{
+  "headline": "We future-proof your business with our technology",
+  "sub-head": "We get our kicks from solving most complex business problems out there. The harder the better.",
+  "cta-1": "Take your first step along The Pebble Way today",
+  "cta-2": "Book your Hack Day with us here",
+  "cta-3": "Book A Hack Day",
+  "cta-help": "It all starts with a Hack Day - that you the client and our best brains in a room for a day. At the end of it we’ll have frantically worked through your most pressing problems, generating loads of ideas and turning one into a working prototype. All in 12hrs!",
+  "testimonials": [
+    {
+      "text": "<p><span>pebble {code}</span> has been, and will continue to be, an integral part of delivering software for our business. Whether it be complex back end integrations on high throughput multiplayer games for the browser, tablet or mobile, <span>pebble {code}</span> has always delivered fantastic results. I couldn't recommend them highly enough.</p>",
+      "client": "Michael Brady",
+      "title": "CEO",
+      "company": "bede gaming"
+    },
+    {
+      "text": "<p>The <span>pebble {code}</span> JavaScript team initially delivered a JavaScript messaging layer for our HTML5 Bingo product.</p><p>Over time their involvement increased and Bede Gaming now work closely with a dedicated team of <span>pebble {code}</span> developers to deliver a suite of complex browser based games and services.</p><p>One of the major successes has been a gaming framework based on Backbone.js and Marionette.js that delivers significant value to the Business.</p>",
+      "client": "Darryl Haydn Jones",
+      "title": "Head of Product Delivery",
+      "company": "bede gaming"
+    },
+    {
+      "text": "<p>RecoAuto has entrusted development of its software platform to <span>pebble {code}</span> who have been an absolute pleasure to work with.</p><p>The quality of their software is top notch and they have always come up with innovative solution to obstacles in the road.</p><p>I would not hesitate to recommend their services.</p>",
+      "client": "Geoff Wheeler",
+      "title": "Managing Director",
+      "company": "RecoAuto Limited"
+    }
+  ]
+}

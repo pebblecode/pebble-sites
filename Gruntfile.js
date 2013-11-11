@@ -12,14 +12,16 @@ module.exports = function ( grunt ) {
     assemble: {
       // shared options
       options: {
-        layout: 'src/shared/templates/layouts/default.hbs',
+        partials: ['src/shared/templates/partials/*.hbs'],
+        layout: ['src/shared/templates/layouts/default.hbs'],
+        postprocess: require('pretty'),
         flatten: true
       },
 
       // generate pebble {code} pages
       codeSite: {
         options: {
-          data: 'src/code/data/*.json'
+          data: ['src/code/data/*.json']
         },
         files: {
           'dist/code/': [ 'src/shared/templates/pages/*.hbs' ]
@@ -29,7 +31,7 @@ module.exports = function ( grunt ) {
       // generate pebble.it pages
       itSite: {
         options: {
-          data: 'src/it/data/*.json'
+          data: ['src/it/data/*.json']
         },
         files: {
           'dist/it/': [ 'src/shared/templates/pages/*.hbs' ]
