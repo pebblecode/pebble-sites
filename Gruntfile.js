@@ -70,7 +70,7 @@ module.exports = function ( grunt ) {
 
     // copy files to dist/
     copy: {
-      main: {
+      devIndex: {
         src: 'src/index.html',
         dest: 'dist/index.html'
       }
@@ -99,7 +99,7 @@ module.exports = function ( grunt ) {
         livereload: true
       },
       html: {
-        files: 'src/shared/templates/**/*.hbs',
+        files: [ 'src/shared/templates/**/*.hbs', 'src/code/data/*.json', 'src/it/data/*.json' ],
         tasks: [ 'clean', 'assemble' ]
       },
       css: {
@@ -112,7 +112,7 @@ module.exports = function ( grunt ) {
       },
       copy: {
         files: 'src/index.html',
-        tasks: [ 'copy' ]
+        tasks: [ 'copy:devIndex' ]
       }
     }
   });
