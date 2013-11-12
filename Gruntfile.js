@@ -70,25 +70,63 @@ module.exports = function ( grunt ) {
 
     // copy files to dist/
     copy: {
+      // copy dev index
       devIndex: {
         src: 'src/index.html',
         dest: 'dist/index.html'
       },
+      // copy shared javascript
       sharedScripts: {
         files: [
-          { expand: true, cwd: 'src/shared/js/', src: [ '**' ], dest: 'dist/code/js/' },
-          { expand: true, cwd: 'src/shared/js/', src: [ '**' ], dest: 'dist/it/js/' }
+          {
+            expand: true,
+            cwd: 'src/shared/js/',
+            src: [ '**' ],
+            dest: 'dist/code/js/'
+          },
+          {
+            expand: true,
+            cwd: 'src/shared/js/',
+            src: [ '**' ],
+            dest: 'dist/it/js/'
+          }
         ]
       },
+      // copy pebble {code} specific javascript
       codeScripts: {
-        files: [
-          { expand: true, cwd: 'src/code/js/', src: [ '**' ], dest: 'dist/code/js/' }
-        ]
+        files: [{ 
+          expand: true,
+          cwd: 'src/code/js/',
+          src: [ '**' ],
+          dest: 'dist/code/js/' 
+        }]
       },
+      // copy pebble.it specific javascript
       itScripts: {
-        files: [
-          { expand: true, cwd: 'src/it/js/', src: [ '**' ], dest: 'dist/it/js/' }
-        ]
+        files: [{ 
+          expand: true,
+          cwd: 'src/it/js/',
+          src: [ '**' ],
+          dest: 'dist/it/js/' 
+        }]
+      },
+      // copy pebble {code} images
+      codeImages: {
+        files: [{ 
+          expand: true,
+          cwd: 'src/code/img/',
+          src: [ '**' ],
+          dest: 'dist/code/img/' 
+        }]
+      },
+      // copy pebble.it images
+      itImages: {
+        files: [{ 
+          expand: true,
+          cwd: 'src/it/img/',
+          src: [ '**' ],
+          dest: 'dist/it/img/'
+        }]
       }
     },
 
@@ -114,19 +152,28 @@ module.exports = function ( grunt ) {
       options: {
         livereload: true
       },
+      // watch for changes to templates and data. Remove all html then rebuild
       html: {
         files: [ 'src/shared/templates/**/*.hbs', 'src/code/data/*.json', 'src/it/data/*.json' ],
-        tasks: [ 'clean', 'assemble' ]
+        tasks: [ 'clean', 'assemble', 'copy:devIndex' ]
       },
+      // watch for Sass changes. Complie to CSS
       css: {
         files: 'src/shared/sass/*.scss',
         tasks: [ 'sass' ]
       },
+      // Watch for javascript changes. Run JShint 7 copy to dist
       js: {
         files: [ 'Gruntfile.js', 'src/shared/js/*.js', 'src/code/js/**/*.js', 'src/code/js/**/*.js' ],
         tasks: [ 'jshint', 'copy:sharedScripts', 'copy:codeScripts', 'copy:itScripts' ]
       },
-      copy: {
+      // watch for changes to images. Copy to dist
+      images: {
+        files: [ 'src/code/img/**/*', 'src/it/img/**/*' ],
+        tasks: [ 'copy:codeImages', 'copy:itImages' ]
+      },
+      // watch for changes to dev index. Copy to dist
+      devIndex: {
         files: 'src/index.html',
         tasks: [ 'copy:devIndex' ]
       }
