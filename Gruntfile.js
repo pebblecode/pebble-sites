@@ -190,4 +190,6 @@ module.exports = function ( grunt ) {
   grunt.loadNpmTasks( 'grunt-contrib-jshint' );
 
   grunt.registerTask( 'default', [ 'connect', 'watch' ] );
+
+  grunt.registerTask( 'make', [ 'clean', 'assemble', 'copy:devIndex', 'copy:sharedScripts', 'copy:codeScripts', 'copy:itScripts', 'copy:itImages' ] );
 };
