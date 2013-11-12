@@ -12,16 +12,16 @@ module.exports = function ( grunt ) {
     assemble: {
       // shared options
       options: {
-        partials: ['src/shared/templates/partials/*.hbs'],
-        layout: ['src/shared/templates/layouts/default.hbs'],
-        postprocess: require('pretty'),
+        partials: [ 'src/shared/templates/partials/*.hbs' ],
+        layout: [ 'src/shared/templates/layouts/default.hbs' ],
+        postprocess: require( 'pretty' ),
         flatten: true
       },
 
       // generate pebble {code} pages
       codeSite: {
         options: {
-          data: ['src/code/data/*.json']
+          data: [ 'src/code/data/*.json' ]
         },
         files: {
           'dist/code/': [ 'src/shared/templates/pages/*.hbs' ]
@@ -31,7 +31,7 @@ module.exports = function ( grunt ) {
       // generate pebble.it pages
       itSite: {
         options: {
-          data: ['src/it/data/*.json']
+          data: [ 'src/it/data/*.json' ]
         },
         files: {
           'dist/it/': [ 'src/shared/templates/pages/*.hbs' ]
@@ -41,7 +41,7 @@ module.exports = function ( grunt ) {
 
     // clean up old html
     clean: {
-      all: ['dist/**/*.html']
+      all: [ 'dist/**/*.html' ]
     },
 
     // compile Sass
@@ -58,22 +58,13 @@ module.exports = function ( grunt ) {
       }
     },
 
-    // watch for changes & complete task
-    watch: {
-      options: {
-        livereload: true
+    // hint all JS files
+    jshint:{
+      data: {
+        src: [ 'src/code/data/**/*.json', 'src/code/data/**/*.json' ]
       },
-      css: {
-        files: 'src/shared/sass/*.scss',
-        tasks: ['sass']
-      },
-      html: {
-        files: 'src/shared/templates/**/*.hbs',
-        tasks: ['clean', 'assemble']
-      },
-      copy: {
-        files: 'src/index.html',
-        tasks: ['copy']
+      js: {
+        src: [ 'Gruntfile.js', 'src/shared/js/*.js', 'src/code/js/**/*.js', 'src/code/js/**/*.js' ]
       }
     },
 
@@ -100,6 +91,29 @@ module.exports = function ( grunt ) {
       dev: {
         path: 'http://localhost:8000'  
       }
+    },
+
+    // watch for changes & complete tasks
+    watch: {
+      options: {
+        livereload: true
+      },
+      html: {
+        files: 'src/shared/templates/**/*.hbs',
+        tasks: [ 'clean', 'assemble' ]
+      },
+      css: {
+        files: 'src/shared/sass/*.scss',
+        tasks: [ 'sass' ]
+      },
+      js: {
+        files: [ 'Gruntfile.js', 'src/shared/js/*.js', 'src/code/js/**/*.js', 'src/code/js/**/*.js' ],
+        tasks: [ 'jshint' ]
+      },
+      copy: {
+        files: 'src/index.html',
+        tasks: [ 'copy' ]
+      }
     }
   });
 
@@ -110,6 +124,7 @@ module.exports = function ( grunt ) {
   grunt.loadNpmTasks( 'grunt-contrib-connect' );
   grunt.loadNpmTasks( 'grunt-contrib-copy' );
   grunt.loadNpmTasks( 'grunt-open' );
+  grunt.loadNpmTasks( 'grunt-contrib-jshint' );
 
   grunt.registerTask( 'default', [ 'connect', 'open', 'watch' ] );
 };
