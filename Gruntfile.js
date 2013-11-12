@@ -73,6 +73,22 @@ module.exports = function ( grunt ) {
       devIndex: {
         src: 'src/index.html',
         dest: 'dist/index.html'
+      },
+      sharedScripts: {
+        files: [
+          { expand: true, cwd: 'src/shared/js/', src: [ '**' ], dest: 'dist/code/js/' },
+          { expand: true, cwd: 'src/shared/js/', src: [ '**' ], dest: 'dist/it/js/' }
+        ]
+      },
+      codeScripts: {
+        files: [
+          { expand: true, cwd: 'src/code/js/', src: [ '**' ], dest: 'dist/code/js/' }
+        ]
+      },
+      itScripts: {
+        files: [
+          { expand: true, cwd: 'src/it/js/', src: [ '**' ], dest: 'dist/it/js/' }
+        ]
       }
     },
 
@@ -108,7 +124,7 @@ module.exports = function ( grunt ) {
       },
       js: {
         files: [ 'Gruntfile.js', 'src/shared/js/*.js', 'src/code/js/**/*.js', 'src/code/js/**/*.js' ],
-        tasks: [ 'jshint' ]
+        tasks: [ 'jshint', 'copy:sharedScripts', 'copy:codeScripts', 'copy:itScripts' ]
       },
       copy: {
         files: 'src/index.html',
@@ -126,5 +142,5 @@ module.exports = function ( grunt ) {
   grunt.loadNpmTasks( 'grunt-open' );
   grunt.loadNpmTasks( 'grunt-contrib-jshint' );
 
-  grunt.registerTask( 'default', [ 'connect', 'open', 'watch' ] );
+  grunt.registerTask( 'default', [ 'connect', 'watch' ] );
 };
