@@ -191,5 +191,5 @@ module.exports = function ( grunt ) {
 
   grunt.registerTask( 'default', [ 'connect', 'watch' ] );
 
-  grunt.registerTask( 'make', [ 'clean', 'assemble', 'copy:devIndex', 'copy:sharedScripts', 'copy:codeScripts', 'copy:itScripts', 'copy:itImages' ] );
+  grunt.registerTask( 'make', [ 'clean', 'assemble', 'sass', 'copy:devIndex', 'copy:sharedScripts', 'copy:codeScripts', 'copy:itScripts', 'copy:codeImages', 'copy:itImages' ] );
 };
