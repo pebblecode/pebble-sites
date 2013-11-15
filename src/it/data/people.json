@@ -3,64 +3,64 @@
     {
       "name": "Seb Nash",
       "title": "CTO & Co-founder",
-      "image": "img/mugs/seb.jpg",
+      "image": "seb.png",
       "twitter": "http://twitter.com/sebbo"
     },
     {
       "name": "Paul Addicott-Evans",
       "title": "Managing Director",
-      "image": "img/mugs/paul.jpg",
+      "image": "paul.png",
       "twitter": "http://twitter.com/elpabl0"
     },
     {
       "name": "David Osen",
       "title": "Operations Director",
-      "image": "img/mugs/david.jpg"
+      "image": "david.png"
     },
     {
       "name": "Graham Gilbert",
       "title": "Lead Engineer",
-      "image": "img/mugs/graham.jpg",
+      "image": "graham.png",
       "twitter": "http://twitter.com/grahamgilbert"
     },
     {
       "name": "Simon Triggs",
       "title": "Senior Tech Consultant",
-      "image": "img/mugs/simon.jpg",
+      "image": "simon.png",
       "twitter": "http://twitter.com/simon_triggs"
     },
     {
       "name": "James Ford",
       "title": "Support Co-ordinator",
-      "image": "img/mugs/james.jpg",
+      "image": "james.png",
       "twitter": "http://twitter.com/fordy"
     },
     {
       "name": "Will Stanway",
       "title": "Tech Consultant",
-      "image": "img/mugs/will.jpg",
+      "image": "will.png",
       "twitter": "http://twitter.com/willstanway"
     },
     {
       "name": "Barry Fivian",
       "title": "Tech Consultant",
-      "image": "img/mugs/barry.jpg",
+      "image": "barry.png",
       "twitter": "http://twitter.com/coppervglass"
     },
     {
       "name": "Charlie Selwyn",
       "title": "Tech Consultant",
-      "image": "img/mugs/charlie.jpg"
+      "image": "charlie.png"
     },
     {
       "name": "Francesca Galluzzo",
       "title": "Administrator",
-      "image": "img/mugs/francesca.jpg"
+      "image": "francesca.png"
     },
     {
       "name": "Toby Hunt",
       "title": "Co-founder",
-      "image": "img/mugs/toby.jpg",
+      "image": "toby.png",
       "twitter": "http://twitter.com/tobyhunt"
     }
   ]

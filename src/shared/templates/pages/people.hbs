@@ -4,6 +4,7 @@ title: " | people"
 <ul>
   {{#each people.person }}
     <li>
+      <img src="img/mug-shots/{{image}}">
       <span class="name">{{ this.name }}</span>
       <span class="title">{{ this.title }}</span>
       <a href="{{ this.twitter }}" class="twitter">T</a>
