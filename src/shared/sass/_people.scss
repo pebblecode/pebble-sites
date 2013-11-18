@@ -9,14 +9,20 @@
   .title{
     display: block;
     text-align: center;
+    line-height: 1;
   }
 
   .name{
     font-weight: 700;
+    margin-top: 8px;
   }
 
   img{
-    width: 80%;
+    width: 84%;
+  }
+
+  li{
+    overflow: hidden;
   }
 }
 
@@ -85,6 +91,13 @@
 
   img{
     width: 50%;
+    position: relative;
+    top: -40px;
+  }
+
+  .name,
+  .title{
+    text-align: right;
   }
 }
 
