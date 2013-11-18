@@ -1,0 +1,109 @@
+//===============================================================================
+// PEOPLE
+//===============================================================================
+.people {
+  top: 60px;
+  position: relative;
+
+  .name,
+  .title{
+    display: block;
+    text-align: center;
+  }
+
+  .name{
+    font-weight: 700;
+  }
+
+  img{
+    width: 80%;
+  }
+}
+
+.vertical,
+.horizontal,
+.small-square,
+.large-square {
+  position: absolute;
+  color: white;
+  padding: 10px;
+
+  &:before{
+    pointer-events:none;
+  }
+
+  &:before,
+  &:after {
+    position: absolute;
+    background-size: cover;
+    content: "";
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+  }
+
+  &:after {
+    border: 1px solid white;
+  }
+}
+
+.color-1 {
+  background-color: $it-blue;
+}
+
+.color-2 {
+  background-color: lighten($it-blue, 7.5); 
+}
+
+.color-3 {
+  background-color: lighten($it-blue, 15); 
+}
+
+.color-4 {
+  background-color: lighten($it-blue, 22.5); 
+}
+
+.vertical {
+  width: ( 100% / 6 );
+
+  &:before{
+    background-image: url( '../img/vertical.svg' );  
+  }
+
+  img{
+    width: 180%;
+  }
+}
+
+.horizontal {
+  width: ( 100% / 3 );
+
+  &:before {
+    background-image: url( '../img/horizontal.svg' );  
+  }
+
+  img{
+    width: 50%;
+  }
+}
+
+.small-square {
+  width: ( 100% / 6 );
+
+  &:before { 
+    background-image: url( '../img/small-square-1.svg' );
+  }
+
+  &:nth-child(odd):before {
+    background-image: url( '../img/small-square-2.svg' );    
+  }
+}
+
+.large-square {
+  width: ( 100% / 3 );
+
+  &:before { 
+    background-image: url( '../img/large-square.svg' );
+  }
+}
