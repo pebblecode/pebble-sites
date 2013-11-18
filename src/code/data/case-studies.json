@@ -1,3 +1,11 @@
 {
-
+  "astrazeneca" : {
+    "headline-1": "AstraZeneca",
+    "headline-2": "Harnessing knowledge",
+    "papragraph-1": "AZ had 200 million documents. If you printed them all out they would weigh more than the Titanic.",
+    "papragraph-2": "But you needed 100 different applications to search them all.",
+    "papragraph-3": "Imagine having to remember 100 different passwords just to search documents at work.",
+    "image-1": "titanic.svg",
+    "image-2": "hand.svg"
+  }
 }

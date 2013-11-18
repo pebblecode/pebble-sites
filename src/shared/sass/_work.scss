@@ -1,0 +1,61 @@
+//===============================================================================
+// WORK
+//===============================================================================
+.astrazeneca {
+
+}
+
+.astrazeneca-intro {
+  background-color: $code-green;
+  background-image: url('../img/az-intro-bg.svg');
+  background-repeat: none;
+  background-size: cover;
+  background-position: 50% bottom;
+  padding: 60px 10% 200px;
+  font-size: 1.4em;
+  position: relative;
+
+  &:after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-bottom: 3px solid white;
+  }
+
+  h2{
+    font-size: 2.5em;
+    line-height: 1;
+    margin-bottom: 0;
+    font-family: "brandon-grotesque";
+    font-weight: 900;
+    font-style: italic;
+    text-transform: uppercase;
+  }
+
+  p,
+  h2{
+    color: white;
+  }
+
+  div{
+    width: 50%;
+    margin-top: 60px;
+
+    &:nth-child(odd) {
+      padding-right: 10px;
+    }
+
+    &:nth-child(even) {
+      padding-left: 10px;
+    }
+  }
+
+  img{
+    width: 90%;
+    height: 300px;
+    margin-bottom: 20px;
+  }
+}
