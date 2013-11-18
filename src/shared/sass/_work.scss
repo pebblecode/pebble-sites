@@ -99,7 +99,23 @@
 }
 
 .az-inovation-before {
-  padding: 80px 10% 120px;
+  padding: 120px 10% 120px;
+  background-image: url('../img/az-brain-bg.svg');
+  background-repeat: none;
+  background-size: cover;
+  background-position: 50% bottom;
+  position: relative;
+  -webkit-font-smoothing: subpixel-antialiased;
+
+  &:after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-bottom: 3px solid white;
+  }
 
   h2:nth-child(2){
     margin-bottom: 40px;
@@ -109,4 +125,10 @@
     width: 60%;
     margin-left: 20%;
   }
+}
+
+.az-inovation-after{
+  padding: 80px 10%;
+  text-align: center;
+  font-size: 1.4em;
 }
