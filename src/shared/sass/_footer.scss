@@ -4,7 +4,14 @@
 .site-footer {
   background: $paper;
   position: absolute;
+  border-top: 1px solid darken($paper, 3);
   bottom: 0;
+  padding: 12px 22px;
   height: $footer-height;
   width: 100%;
+
+  a{
+    text-decoration: none;
+    font-weight: 300;
+  }
 }
