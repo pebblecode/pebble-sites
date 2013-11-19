@@ -55,4 +55,30 @@ $(document).ready(function(){
     $( this ).addClass( colorClasses[ Math.floor(Math.random() * 4) + 0 ] );
   });
   
+
+  $( '.people li' ).each( function() {
+    // $( this ).addClass( colorClasses[ Math.random()*colorClasses.size ] );
+    $( this ).addClass( colorClasses[ Math.floor(Math.random() * 4) + 0 ] );
+  });
+
+  // google maps stuff
+  
+  function initialize() {
+    var mapOptions = {
+      center: new google.maps.LatLng(51.485672, -0.118554),
+      zoom: 15,
+      scrollwheel: false,
+      disableDefaultUI: true
+    };
+    var map = new google.maps.Map(document.getElementById("map-canvas"),
+        mapOptions);
+
+    var marker = new google.maps.Marker({
+      position: new google.maps.LatLng(51.485672, -0.118554),
+      map: map,
+      title:"Hello World!"
+    });
+  }
+  google.maps.event.addDomListener(window, 'load', initialize);
+
 });
