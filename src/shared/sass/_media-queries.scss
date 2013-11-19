@@ -11,17 +11,17 @@
   .site-logo-container{
     height: $header-height-large;
 
-    &:hover{
-      .site-logo{
-        -webkit-transform: rotateX(-90deg);   
-        background: which-pebble(darken($pc-pink, 25), darken($it-blue, 15));
-      }
+    // &:hover{
+    //   .site-logo{
+    //     -webkit-transform: rotateX(-90deg);   
+    //     background: which-pebble(darken($pc-pink, 25), darken($it-blue, 15));
+    //   }
 
-      .site-logo-flip{
-        -webkit-transform: rotateX(0deg);
-        background: which-pebble(saturate(lighten($pc-pink, 7.5), 100), lighten($it-blue, 5));
-      }
-    }
+    //   .site-logo-flip{
+    //     -webkit-transform: rotateX(0deg);
+    //     background: which-pebble(saturate(lighten($pc-pink, 7.5), 100), lighten($it-blue, 5));
+    //   }
+    // }
   }
 
   .site-logo{

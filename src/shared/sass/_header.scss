@@ -49,16 +49,16 @@
   transition: -webkit-transform .3s, background .3s;
 }
 
-.site-logo-flip{
-  padding: 9px 6px 8px;
-  height: 100%;
-  -webkit-transform-origin: 50% 100%;
-  -webkit-transform: rotateX(-90deg);
-  transition: -webkit-transform .3s, background .3s;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
+// .site-logo-flip{
+//   padding: 9px 6px 8px;
+//   height: 100%;
+//   -webkit-transform-origin: 50% 100%;
+//   -webkit-transform: rotateX(-90deg);
+//   transition: -webkit-transform .3s, background .3s;
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+// }
 
 .nav-btn{
   text-indent: -99999px;
