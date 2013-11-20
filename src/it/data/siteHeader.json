@@ -1,7 +1,6 @@
 { 
   "sections": [
     { "page": "work", "url": "work" },
-    { "page": "people", "url": "people"  },
-    { "page": "insights", "url": "insights"  }
+    { "page": "people", "url": "people"  }
   ]
 }
