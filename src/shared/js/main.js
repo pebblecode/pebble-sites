@@ -23,7 +23,7 @@ $(document).ready(function(){
   // people page layout
   var squareSide = ( $( window ).width() -15 ) / 6;
 
-  $( '.people' ).height( squareSide * 4 + 60 );
+  $( '.people' ).height( squareSide * 8 + 60 );
   $( '.horizontal, .small-square' ).height( squareSide );
   $( '.vertical, .large-square' ).height( squareSide * 2 );
 
@@ -48,6 +48,21 @@ $(document).ready(function(){
   peopleGrid( 12 , 2, 3 );
   peopleGrid( 13 , 2, 4 );
 
+  peopleGrid( 14 , 4, 0 );
+  peopleGrid( 15 , 4, 1 );
+  peopleGrid( 16 , 4, 3 );
+  peopleGrid( 17 , 4, 5 );
+  peopleGrid( 18 , 5, 0 );
+  peopleGrid( 19 , 6, 1 );
+  peopleGrid( 20 , 5, 2 );
+  peopleGrid( 21 , 5, 4 );
+  peopleGrid( 22 , 7, 0 );
+  peopleGrid( 23 , 7, 1 );
+  peopleGrid( 24 , 7, 3 );
+  peopleGrid( 25 , 6, 4 );
+  peopleGrid( 26 , 6, 5 );
+  peopleGrid( 27 , 7, 5 );
+
   var colorClasses = ['color-1', 'color-2', 'color-3', 'color-4'];
 
   $( '.people li' ).each( function() {
@@ -55,11 +70,6 @@ $(document).ready(function(){
     $( this ).addClass( colorClasses[ Math.floor(Math.random() * 4) + 0 ] );
   });
   
-
-  $( '.people li' ).each( function() {
-    // $( this ).addClass( colorClasses[ Math.random()*colorClasses.size ] );
-    $( this ).addClass( colorClasses[ Math.floor(Math.random() * 4) + 0 ] );
-  });
 
   // google maps stuff
   

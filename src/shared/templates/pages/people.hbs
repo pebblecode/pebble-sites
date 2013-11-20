@@ -2,15 +2,6 @@
 title: " | people"
 ---
 <ul class="people clear-fix">
-{{!--   {{#each people.person }}
-    <li>
- 
-      <span class="name">{{ this.name }}</span>
-      <span class="title">{{ this.title }}</span>
-      <a href="{{ this.twitter }}" class="twitter">T</a>
-      <img src="img/mug-shots/{{image}}">
-    </li>
-  {{/each}} --}}
 
   <li class="vertical left person-1">
     <span class="name">{{ people.person.1.name }}</span>
@@ -79,12 +70,22 @@ title: " | people"
     <img src="img/mug-shots/{{ people.person.10.image }}">
   </li>
 
-  <li class="small-square left person-11">
-    <span class="name">{{ people.person.0.name }}</span>
-    <span class="title">{{ people.person.0.title }}</span>
-    <a href="{{ people.person.0.twitter }}" class="twitter">T</a>
-    <img src="img/mug-shots/{{ people.person.0.image }}">
-  </li>
+  
+  {{#if people.person.11.name }}
+    <li class="vertical left person-11">
+      <span class="name">{{ people.person.0.name }}</span>
+      <span class="title">{{ people.person.0.title }}</span>
+      <a href="{{ people.person.0.twitter }}" class="twitter">T</a>
+      <img src="img/mug-shots/{{ people.person.0.image }}">
+    </li>
+  {{else}}
+    <li class="small-square left person-11">
+      <span class="name">{{ people.person.0.name }}</span>
+      <span class="title">{{ people.person.0.title }}</span>
+      <a href="{{ people.person.0.twitter }}" class="twitter">T</a>
+      <img src="img/mug-shots/{{ people.person.0.image }}">
+    </li>
+  {{/if}}
 
   <li class="vertical left person-12">
     <span class="name">{{ people.person.7.name }}</span>
@@ -97,5 +98,126 @@ title: " | people"
 
   </li>
 
+  {{#if people.person.11.name }}
+    <li class="small-square left person-14">
+      <span class="name">{{ people.person.11.name }}</span>
+      <span class="title">{{ people.person.11.title }}</span>
+      <a href="{{ people.person.11.twitter }}" class="twitter">T</a>
+      <img src="img/mug-shots/{{ people.person.11.image }}">
+    </li>  
+  {{/if}}
+
+  {{#if people.person.11.name }}
+    <li class="vertical left person-15">
+      <span class="name">{{ people.person.12.name }}</span>
+      <span class="title">{{ people.person.12.title }}</span>
+      <a href="{{ people.person.12.twitter }}" class="twitter">T</a>
+      <img src="img/mug-shots/{{ people.person.12.image }}">
+    </li>  
+  {{/if}}
+  
+  {{#if people.person.11.name }}
+    <li class="horizontal left person-16">
+      <span class="name">{{ people.person.13.name }}</span>
+      <span class="title">{{ people.person.13.title }}</span>
+      <a href="{{ people.person.13.twitter }}" class="twitter">T</a>
+      <img src="img/mug-shots/{{ people.person.13.image }}">
+    </li>  
+  {{/if}}
+
+  {{#if people.person.11.name }}
+    <li class="vertical left person-17">
+      <span class="name">{{ people.person.14.name }}</span>
+      <span class="title">{{ people.person.14.title }}</span>
+      <a href="{{ people.person.14.twitter }}" class="twitter">T</a>
+      <img src="img/mug-shots/{{ people.person.14.image }}">
+    </li>  
+  {{/if}}
+
+  {{#if people.person.11.name }}
+    <li class="vertical left person-18">
+      <span class="name">{{ people.person.15.name }}</span>
+      <span class="title">{{ people.person.15.title }}</span>
+      <a href="{{ people.person.15.twitter }}" class="twitter">T</a>
+      <img src="img/mug-shots/{{ people.person.15.image }}">
+    </li>  
+  {{/if}}
+
+  {{#if people.person.11.name }}
+    <li class="small-square left person-19">
+      <span class="name">{{ people.person.16.name }}</span>
+      <span class="title">{{ people.person.16.title }}</span>
+      <a href="{{ people.person.16.twitter }}" class="twitter">T</a>
+      <img src="img/mug-shots/{{ people.person.16.image }}">
+    </li>  
+  {{/if}}
+
+  {{#if people.person.11.name }}
+    <li class="large-square left person-20">
+    </li>  
+  {{/if}}
+
+  {{#if people.person.11.name }}
+    <li class="small-square left person-21">
+      <span class="name">{{ people.person.17.name }}</span>
+      <span class="title">{{ people.person.17.title }}</span>
+      <a href="{{ people.person.17.twitter }}" class="twitter">T</a>
+      <img src="img/mug-shots/{{ people.person.17.image }}">
+    </li>  
+  {{/if}}
+
+  {{#if people.person.11.name }}
+    <li class="small-square left person-22">
+      <span class="name">{{ people.person.18.name }}</span>
+      <span class="title">{{ people.person.18.title }}</span>
+      <a href="{{ people.person.18.twitter }}" class="twitter">T</a>
+      <img src="img/mug-shots/{{ people.person.18.image }}">
+    </li>  
+  {{/if}}
+
+  {{#if people.person.11.name }}
+    <li class="horizontal left person-23">
+      <span class="name">{{ people.person.19.name }}</span>
+      <span class="title">{{ people.person.19.title }}</span>
+      <a href="{{ people.person.19.twitter }}" class="twitter">T</a>
+      <img src="img/mug-shots/{{ people.person.19.image }}">
+    </li>  
+  {{/if}}
+
+  {{#if people.person.11.name }}
+    <li class="small-square left person-24">
+      <span class="name">{{ people.person.20.name }}</span>
+      <span class="title">{{ people.person.20.title }}</span>
+      <a href="{{ people.person.20.twitter }}" class="twitter">T</a>
+      <img src="img/mug-shots/{{ people.person.20.image }}">
+    </li>  
+  {{/if}}
+
+  {{#if people.person.11.name }}
+    <li class="vertical left person-25">
+      <span class="name">{{ people.person.21.name }}</span>
+      <span class="title">{{ people.person.21.title }}</span>
+      <a href="{{ people.person.21.twitter }}" class="twitter">T</a>
+      <img src="img/mug-shots/{{ people.person.21.image }}">
+    </li>  
+  {{/if}}
+
+  {{#if people.person.11.name }}
+    <li class="small-square left person-26">
+      <span class="name">{{ people.person.22.name }}</span>
+      <span class="title">{{ people.person.22.title }}</span>
+      <a href="{{ people.person.22.twitter }}" class="twitter">T</a>
+      <img src="img/mug-shots/{{ people.person.22.image }}">
+    </li>  
+  {{/if}}
+
+  {{#if people.person.11.name }}
+    <li class="small-square left person-27">
+      <span class="name">{{ people.person.23.name }}</span>
+      <span class="title">{{ people.person.23.title }}</span>
+      <a href="{{ people.person.23.twitter }}" class="twitter">T</a>
+      <img src="img/mug-shots/{{ people.person.23.image }}">
+    </li>  
+  {{/if}}
 
 </ul>

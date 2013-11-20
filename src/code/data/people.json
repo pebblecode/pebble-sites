@@ -141,6 +141,11 @@
       "name": "Fergus Hynd",
       "title": "Sales & Marketing",
       "image": "fergus.png"
+    },
+    {
+      "name": "Nancy Lee",
+      "title": "UI/UX Designer",
+      "image": "nancy.png"
     }
   ]
 }
