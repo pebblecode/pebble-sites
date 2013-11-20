@@ -55,19 +55,19 @@
 }
 
 .color-1 {
-  background-color: $it-blue;
+  background-color: which-pebble( $pc-pink, $it-blue );
 }
 
 .color-2 {
-  background-color: lighten($it-blue, 7.5); 
+  background-color: which-pebble( lighten( $pc-pink, 7.5 ) ,lighten( $it-blue, 7.5 ) ); 
 }
 
 .color-3 {
-  background-color: lighten($it-blue, 15); 
+  background-color: which-pebble( lighten( $pc-pink, 15 ) ,lighten( $it-blue, 15 ) ); 
 }
 
 .color-4 {
-  background-color: lighten($it-blue, 22.5); 
+  background-color: which-pebble( lighten( $pc-pink, 22.5 ) ,lighten( $it-blue, 22.5 ) ); 
 }
 
 .vertical {
