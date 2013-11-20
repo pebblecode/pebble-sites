@@ -20,6 +20,7 @@
   padding: 60px 60px 100px;
   position: relative;
   background-position: 0 -60px;
+  margin-top: 60px;
 
   &::before{
     background: which-pebble($code-head, $it-head);
