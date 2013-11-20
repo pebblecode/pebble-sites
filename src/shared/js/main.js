@@ -21,7 +21,7 @@ $(document).ready(function(){
   });
 
   // people page layout
-  var squareSide = ( $( window ).width() -15 ) / 6;
+  var squareSide = ( $( window ).width() -15 ) / 6 ;
 
   $( '.people' ).height( squareSide * 8 + 60 );
   $( '.horizontal, .small-square' ).height( squareSide );
@@ -66,12 +66,8 @@ $(document).ready(function(){
   var colorClasses = ['color-1', 'color-2', 'color-3', 'color-4'];
 
   $( '.people li' ).each( function() {
-    // $( this ).addClass( colorClasses[ Math.random()*colorClasses.size ] );
     $( this ).addClass( colorClasses[ Math.floor(Math.random() * 4) + 0 ] );
   });
-  
-
-  // google maps stuff
   
   function initialize() {
     var mapOptions = {

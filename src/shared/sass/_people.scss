@@ -32,7 +32,7 @@
 .large-square {
   position: absolute;
   color: white;
-  padding: 10px;
+  // padding: 10px;
 
   &:before{
     pointer-events:none;
@@ -41,12 +41,14 @@
   &:before,
   &:after {
     position: absolute;
-    background-size: cover;
+    // background-size: 100% 100%;
+    background-repeat: no-repeat;
     content: "";
     top: 0;
     left: 0;
     bottom: 0;
     right: 0;
+    z-index: 3;
   }
 
   &:after {
