@@ -4,6 +4,7 @@
 #map-canvas {
   z-index: 1;
   opacity: .6;
+  position: fixed !important;
 }
 
 .address,
