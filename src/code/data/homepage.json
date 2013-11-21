@@ -5,6 +5,7 @@
   "cta-2": "Book your Hack Day with us here",
   "cta-3": "Book A Hack Day",
   "cta-help": "It all starts with a Hack Day - that you the client and our best brains in a room for a day. At the end of it we’ll have frantically worked through your most pressing problems, generating loads of ideas and turning one into a working prototype. All in 12hrs!",
+  "cta-link": "mailto:info@pebblecode.com?subject=Book a hack day",
   "testimonials": [
     {
       "text": "<p><span>pebble {code}</span> has been, and will continue to be, an integral part of delivering software for our business. Whether it be complex back end integrations on high throughput multiplayer games for the browser, tablet or mobile, <span>pebble {code}</span> has always delivered fantastic results. I couldn't recommend them highly enough.</p>",

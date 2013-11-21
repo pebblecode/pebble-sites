@@ -77,7 +77,7 @@
   .block-1,
   .block-2{
     display: block;
-    font-size: which-pebble(44px, 57px);
+    font-size: 44px;
     line-height: 1.2;
     position: relative;
   }
@@ -88,7 +88,7 @@
     -webkit-perspective: 1000px;
 
     &::after{
-      background-image: which-pebble(url('../img/hack-icons.svg'), url('../img/device-icons.svg'));
+      background-image: which-pebble(url('../img/reach.svg'), url('../img/device-icons.svg'));
       background-repeat: no-repeat;
       background-position: center bottom;
       -webkit-transform-origin: 0 50%;
@@ -100,7 +100,7 @@
       left: 0;
       bottom: 0;
       right: 0;
-      background-color: which-pebble($code-head, $it-head);
+      background-color: which-pebble( $code-head, darken( $it-head, 5 ) );
     }
   }
 
@@ -124,7 +124,7 @@
       left: 0;
       bottom: 0;
       right: 0;
-      background: which-pebble($code-head, $it-head);
+      background: which-pebble( $code-head, darken( $it-head, 5 ) );
 
     }
   }
