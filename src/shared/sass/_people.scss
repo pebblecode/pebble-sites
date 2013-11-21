@@ -32,7 +32,6 @@
 .large-square {
   position: absolute;
   color: white;
-  // padding: 10px;
 
   &:before{
     pointer-events:none;
@@ -53,6 +52,10 @@
 
   &:after {
     border: 1px solid white;
+  }
+
+  .name {
+    margin-top: 25px;
   }
 }
 
@@ -100,6 +103,7 @@
   .name,
   .title{
     text-align: right;
+    margin-right: 25px;
   }
 }
 
