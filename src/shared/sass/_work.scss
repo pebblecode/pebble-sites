@@ -28,7 +28,7 @@
 
 .az-search-before {
   background-image: url('../img/az-intro-bg.svg');
-  background-repeat: none;
+  background-repeat: no-repeat;
   background-size: cover;
   background-position: 50% bottom;
   padding: 120px 10% 180px;
@@ -101,7 +101,7 @@
 .az-inovation-before {
   padding: 120px 10% 120px;
   background-image: url('../img/az-brain-bg.svg');
-  background-repeat: none;
+  background-repeat: no-repeat;
   background-size: cover;
   background-position: 50% bottom;
   position: relative;
@@ -129,9 +129,137 @@
 
 .az-inovation-after{
   padding: 80px 10%;
-  text-align: center;
   font-size: 1.4em;
+
+  .left{
+    width: 50%;
+  }
+
+  img{
+    width: 60%;
+    margin-left: 20%;
+    margin-bottom: 80px;
+  }
 }
+
+.reco-before{
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-image: url('../img/reco-bg.svg');
+  padding: 80px 10%;
+
+  h2{
+    color: white;
+    line-height: 1;
+    font-size: 60px;
+    margin-bottom: 0;
+  }
+
+  .left{
+    width: 47.5%;
+    margin-right: 5%;
+    text-align: center;
+
+    &:last-child{
+      margin-right: 0;
+    }
+  }
+
+  .locate{
+    margin-top: 80px;
+  }
+
+  p{
+    color: white;
+    text-align: left;
+    font-size: 24px;
+  }
+
+  .last{
+    margin-top: 20px;
+  }
+}
+
+.reco-after{
+  padding: 80px 10%;
+
+  .left{
+    width: 47.5%;
+    margin-right: 5%;
+
+    &:last-child{
+      margin-right: 0;
+    }
+  }
+
+  img{
+    width: 70%;
+    margin-left: 15%;
+    margin-bottom: 40px;
+  }
+}
+
+.bede-before{
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-image: url('../img/bede-bg.svg');
+  padding: 80px 10% 160px;
+
+   h2{
+    color: white;
+    line-height: 1;
+    font-size: 60px;
+    margin-bottom: 0;
+  }
+
+  p{
+    color: white;
+    text-align: left;
+    font-size: 24px;
+  }
+
+  .left{
+    width: 47.5%;
+    margin-right: 5%;
+
+    &:last-child{
+      margin-right: 0;
+    }
+  }
+
+  img{
+    width: 70%;
+    margin: 40px 15%;
+  }
+}
+
+.bede-after{
+  padding: 80px 10%;
+
+  .left{
+    width: 47.5%;
+    margin-right: 5%;
+    text-align: center;
+
+    &:last-child{
+      margin-right: 0;
+    }
+  }
+
+  p{
+    text-align: left;
+    margin-top: 80px;
+  }
+
+  img{
+    max-height: 260px;
+  } 
+}
+
+
+
+
+
 
 .it-work {
   padding-top: 60px;

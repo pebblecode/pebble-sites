@@ -94,6 +94,9 @@ $(document).ready(function(){
       title:"Hello World!"
     });
   }
-  google.maps.event.addDomListener(window, 'load', initialize);
+
+  if ( $( '#map-canvas' ).length > 0 ) {
+    google.maps.event.addDomListener(window, 'load', initialize);
+  }
 
 });
