@@ -3,8 +3,17 @@
 //===============================================================================
 #map-canvas {
   z-index: 1;
-  opacity: .6;
   position: fixed !important;
+
+  &:after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: hsla( 0, 0, 100, .4 );
+  }
 }
 
 .address,
