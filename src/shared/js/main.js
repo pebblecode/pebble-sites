@@ -1,7 +1,13 @@
 /*global $:true, console:true, Handlebars:true, JST:true*/
 $(document).ready(function(){
 
-  $( '.homepage-head' ).height( $( window ).height() -220 );
+  $( '.homepage-head' ).height( $( window ).height() -60 );
+
+  console.log( $( '.homepage-head h1' ).height() + $( '.homepage-head h2' ).height() );
+
+  $( '.homepage-head' ).css( 'padding-top', 
+    ( $( window ).height() - ( $( '.homepage-head h1' ).height() + $( '.homepage-head h2' ).height() ) ) / 2 + 25 + 'px'
+  );
 
   $('.nav-btn').click( function() {
     $('.site-header').toggleClass('expanded');
@@ -13,7 +19,13 @@ $(document).ready(function(){
       $('.site-header').removeClass('expanded');
     }
 
-    $( '.homepage-head' ).height( $( window ).height() -220 );
+    $( '.homepage-head' ).height( $( window ).height() -60 );
+
+    $( '.homepage-head' ).css( 'padding-top', 
+      ( $( window ).height() - ( $( '.homepage-head h1' ).height() + $( '.homepage-head h2' ).height() ) ) / 2 + 25 + 'px'
+    );
+
+    console.log( $( '.homepage-head h1' ).height() + $( '.homepage-head h2' ).height() );
   });
 
   $( window ).scroll( function() {
