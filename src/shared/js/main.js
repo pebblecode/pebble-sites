@@ -3,7 +3,6 @@ $(document).ready(function(){
 
   $( '.homepage-head' ).height( $( window ).height() -60 );
 
-  console.log( $( '.homepage-head h1' ).height() + $( '.homepage-head h2' ).height() );
 
   $( '.homepage-head' ).css( 'padding-top', 
     ( $( window ).height() - ( $( '.homepage-head h1' ).height() + $( '.homepage-head h2' ).height() ) ) / 2 + 25 + 'px'
@@ -11,7 +10,7 @@ $(document).ready(function(){
 
   $('.nav-btn').click( function() {
     $('.site-header').toggleClass('expanded');
-    console.log('nav-clicked');
+
   });
 
   $( window ).resize(function(event) {
@@ -25,7 +24,7 @@ $(document).ready(function(){
       ( $( window ).height() - ( $( '.homepage-head h1' ).height() + $( '.homepage-head h2' ).height() ) ) / 2 + 25 + 'px'
     );
 
-    console.log( $( '.homepage-head h1' ).height() + $( '.homepage-head h2' ).height() );
+
   });
 
   $( window ).scroll( function() {
@@ -110,5 +109,14 @@ $(document).ready(function(){
   if ( $( '#map-canvas' ).length > 0 ) {
     google.maps.event.addDomListener(window, 'load', initialize);
   }
+
+  // sliding contacts
+  $( '.find-us-link' ).click( function() {
+    $( '.contact-panel' ).addClass( 'active' );
+  });
+
+  $( '#map-canvas, .site-header' ).click( function() {
+    $( '.contact-panel' ).removeClass( 'active' );
+  });
 
 });

@@ -3,7 +3,6 @@
 //===============================================================================
 #map-canvas {
   z-index: 1;
-  position: fixed !important;
 
   &:after{
     content: '';
@@ -24,10 +23,11 @@
 
   span,
   a {
-    display: block;
+    display: inline-block;
   }
 
   a {
+    display: inline-block;
     text-decoration: none;
   }
 }
