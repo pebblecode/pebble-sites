@@ -43,11 +43,3 @@
   -moz-box-sizing: $type;
   -webkit-box-sizing: $type;
 }
-
-@mixin vendor-prefix( $property, $value ) {
-  -webkit-#{ $property }: #{ $value };
-  -ms-#{ $property }: #{ $value };
-  -moz-#{ $property }: #{ $value };
-  -o-#{ $property }: #{ $value };
-  #{ $property }: #{ $value };
-}

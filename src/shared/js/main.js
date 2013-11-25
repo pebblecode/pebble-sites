@@ -111,13 +111,4 @@ $(document).ready(function(){
     google.maps.event.addDomListener(window, 'load', initialize);
   }
 
-  // footer interactions
-  $( '.contact-link' ).click( function() {
-    $( '.site-footer' ).addClass( 'active' );
-  });
-
-  $( '.site-header' ).click( function() {
-    $( '.site-footer' ).removeClass( 'active' );
-  });
-
 });
