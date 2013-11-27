@@ -181,10 +181,10 @@ module.exports = function ( grunt ) {
 
     'gh-pages': {
       options: {
-        base: 'dist'
+        base: [ 'dist/*.html', 'dist/code/**', 'dist/it/**' ]
       },
 
-      src: ['*.html', 'js/**/*', 'css/**/*', 'img/**/*']
+      src: [ '*.html', 'js/**/*', 'css/**/*', 'img/**/*' ]
     }
   });
 
