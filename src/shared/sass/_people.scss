@@ -4,6 +4,9 @@
 .people {
   top: 60px;
   position: relative;
+  overflow: hidden;
+  transition: opacity .25s;
+  margin-bottom: 70px;
 
   .name,
   .title{
@@ -21,8 +24,12 @@
     width: 84%;
   }
 
-  li{
+  .person{
     overflow: hidden;
+  }
+
+  &.hide {
+    opacity: 0;
   }
 }
 
@@ -30,7 +37,7 @@
 .horizontal,
 .small-square,
 .large-square {
-  position: absolute;
+  position: relative;
   color: white;
 
   &:before{
@@ -76,8 +83,6 @@
 }
 
 .vertical {
-  width: ( 100% / 6 );
-
   &:before{
     background-image: url( '../img/vertical.svg' );  
   }
@@ -88,8 +93,6 @@
 }
 
 .horizontal {
-  width: ( 100% / 3 );
-
   &:before {
     background-image: url( '../img/horizontal.svg' );  
   }
@@ -108,8 +111,6 @@
 }
 
 .small-square {
-  width: ( 100% / 6 );
-
   &:before { 
     background-image: url( '../img/small-square-1.svg' );
   }
@@ -120,8 +121,6 @@
 }
 
 .large-square {
-  width: ( 100% / 3 );
-
   &:before { 
     background-image: url( '../img/large-square.svg' );
   }

@@ -36,57 +36,7 @@ $(document).ready(function(){
       top: squareSide * x,
       left: squareSide * y  
     });
-  }
-
-  // if on people page , do the people page stuff.
-  if ( $( '.people' ).length > 0 ) {
-    var squareSide = ( $( window ).width() -15 ) / 6 ;
-
-    $( '.horizontal, .small-square' ).height( squareSide );
-    $( '.vertical, .large-square' ).height( squareSide * 2 );
-
-    peopleGrid( 1 , 0, 0 );
-    peopleGrid( 2 , 0, 1 );
-    peopleGrid( 3 , 0, 3 );
-    peopleGrid( 4 , 0, 4 );
-    peopleGrid( 5 , 0, 5 );
-    peopleGrid( 6 , 2, 0 );
-    peopleGrid( 7 , 1, 1 );
-    peopleGrid( 8 , 1, 3 );
-    peopleGrid( 9 , 1, 4 );
-    peopleGrid( 10 , 3, 0 );
-    peopleGrid( 11 , 3, 2 );
-    peopleGrid( 12 , 2, 3 );
-    peopleGrid( 13 , 2, 4 );
-
-    if ( $('.people li').length > 13 ) {
-      $( '.people' ).height( squareSide * 8 + 60 );
-
-      peopleGrid( 14 , 4, 0 );
-      peopleGrid( 15 , 4, 1 );
-      peopleGrid( 16 , 4, 3 );
-      peopleGrid( 17 , 4, 5 );
-      peopleGrid( 18 , 5, 0 );
-      peopleGrid( 19 , 6, 1 );
-      peopleGrid( 20 , 5, 2 );
-      peopleGrid( 21 , 5, 4 );
-      peopleGrid( 22 , 7, 0 );
-      peopleGrid( 23 , 7, 1 );
-      peopleGrid( 24 , 7, 3 );
-      peopleGrid( 25 , 6, 4 );
-      peopleGrid( 26 , 6, 5 );
-      peopleGrid( 27 , 7, 5 );
-    }
-    else {
-      $( '.people' ).height( squareSide * 4 + 60 );
-    }
-
-    var colorClasses = ['color-1', 'color-2', 'color-3', 'color-4'];
-
-    $( '.people li' ).each( function() {
-      $( this ).addClass( colorClasses[ Math.floor(Math.random() * 4) + 0 ] );
-    }); 
-  }  
+  } 
 
   // maps stuff. 
   function initialize() {
@@ -118,5 +68,60 @@ $(document).ready(function(){
   $( '#map-canvas, .site-header' ).click( function() {
     $( '.contact-panel' ).removeClass( 'active' );
   });
+
+  // people page stuff
+  var peopleColumns = 6;
+  var colorClasses = ['color-1', 'color-2', 'color-3', 'color-4'];
+
+  function respond () {
+    if ( $( window ).width() < 1000 && $( window ).width() > 800 ) {
+      peopleColumns = 5;
+    }
+    else if ( $( window ).width() <= 800 && $( window ).width() > 600 ) {
+      peopleColumns = 4;
+    }
+    else if ( $( window ).width() <= 600 && $( window ).width() > 400 ) {
+      peopleColumns = 3;
+    }
+    else if ( $( window ).width() <= 400 ) {
+      peopleColumns = 2;
+      $( '.horizontal, .vertical' ).removeClass( 'horizontal vertical' ).addClass( 'small-square' );
+    }
+  }
+
+  respond();
+
+  peopleSize = function () {
+    var unit = Math.floor( $( window ).innerWidth() / peopleColumns );
+    $( '.small-square' ).height( unit ).width( unit );
+    $( '.large-square' ).height( unit * 2 ).width( unit * 2 );
+    $( '.vertical' ).height( unit * 2 ).width( unit );
+    $( '.horizontal' ).height( unit ).width( unit * 2 );
+  };
+
+  peopleSize();
+
+  $(function(){
+    var $container = $( '.people' );
+    $container.masonry({
+      itemSelector : '.person',
+      isResizeBound : false
+    });
+
+    $( window ).resize(function(event) {
+      $( '.people' ).addClass( 'hide' );
+      respond();
+      peopleSize();
+      $container.masonry();
+    });
+
+    $container.masonry( 'on', 'layoutComplete', function() {
+      $( '.people' ).removeClass( 'hide' );
+    });
+  });
+
+  $( '.person' ).each( function() {
+    $( this ).addClass( colorClasses[ Math.floor(Math.random() * 4) + 0 ] );
+  }); 
 
 });
