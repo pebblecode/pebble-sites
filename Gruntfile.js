@@ -181,7 +181,7 @@ module.exports = function ( grunt ) {
 
     'gh-pages': {
       options: {
-        base: 'app'
+        base: 'dist'
       },
 
       src: ['*.html', 'js/**/*', 'css/**/*', 'img/**/*']
