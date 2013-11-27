@@ -177,6 +177,14 @@ module.exports = function ( grunt ) {
         files: 'src/index.html',
         tasks: [ 'copy:devIndex' ]
       }
+    },
+
+    'gh-pages': {
+      options: {
+        base: 'app'
+      },
+
+      src: ['*.html', 'js/**/*', 'css/**/*', 'img/**/*']
     }
   });
 
@@ -188,6 +196,7 @@ module.exports = function ( grunt ) {
   grunt.loadNpmTasks( 'grunt-contrib-copy' );
   grunt.loadNpmTasks( 'grunt-open' );
   grunt.loadNpmTasks( 'grunt-contrib-jshint' );
+  grunt.loadNpmTasks( 'grunt-gh-pages' );
 
   grunt.registerTask( 'default', [ 'connect', 'watch' ] );
 
