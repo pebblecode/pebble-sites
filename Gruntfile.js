@@ -49,7 +49,8 @@ module.exports = function ( grunt ) {
       dist: {
         options: {
           style: 'expanded',
-          lineNumbers: true
+          lineNumbers: true,
+          sourcemap: true
         },
         files: {
           'dist/code/css/styles.css': 'src/shared/sass/code-styles.scss',
@@ -134,7 +135,7 @@ module.exports = function ( grunt ) {
     connect: {
       server: {
         options: {
-          port: 8000,
+          port: 7770,
           base: 'dist/'
         }
       }
@@ -143,7 +144,7 @@ module.exports = function ( grunt ) {
     // open browser on start
     open: {
       dev: {
-        path: 'http://localhost:8000'  
+        path: 'http://localhost:7770'  
       }
     },
 
