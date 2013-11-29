@@ -142,9 +142,19 @@
     margin: 0 auto;
   }
 
-  li{
-    width: 33.3333%;
-    padding: 0 3%;
+  li {
+    margin-bottom: 60px;
+  }
+
+  .text {
+    font-size: 70px;
+    margin-bottom: 0;
+    color: which-pebble($pc-pink, $it-blue);
+
+    &:before,
+    &:after {
+      content: "'";
+    }
   }
 
   span{
@@ -153,8 +163,5 @@
 
   .title {
     font-weight: 300;
-  }
-  .company{
-    display: block;
   }
 }

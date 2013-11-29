@@ -9,15 +9,21 @@
   "cta-link": "mailto:info@pebbleit.com?subject=Book a free Consultancy",
   "testimonials": [
     {
-      "text": "<p>Working with <span>pebble.it</span> has been both pleasurable and painless; two words not commonly associated with company IT needs. Their rates are competitive and they work quickly, effectively and without fuss. We wholeheartedly recommend their services.</p>",
-      "company": "Vigilance Properties"
-    },
-    {
-      "text": "<p><span>pebble.it</span> was our first experience of outsourcing IT having previously had a dedicated one or two man team in house. Any nervousness about having remote support disappeared within hours of them starting - with the slickest ticketing system, friendly and engaged support engineers and an incredibly impressive response time to more urgent requests - they blew us away. Their Mac knowledge is deep - and their ability to diagnose and fix was swift. They also helped us plan ahead for upgrades and spend over the forthcoming year and took us from a good place in terms of infrastructure to a really solid place. The only reason we don't use them now is because we sold our business and the new owner has in house IT. It is no understatement to say we miss Pebble hugely.</p>",
+      "text": "they blew us away",
+      "client": "Jack Horner",
+      "title": ", Founder ,",
       "company": "FRUKT"
     },
     {
-      "text": "<p><span>pebble.it</span> are our trusted partner and support us not only on important day-to-day tasks but the strategical direction of our IT infrastructure and capabilities.</p>",
+      "text": "We wholeheartedly recommend their services",
+      "client": "Seb MacKenzie-Wilson",
+      "title": ", COO ,",
+      "company": "Vigilance Properties"
+    },
+    {
+      "text": "pebble.it are our trusted partner",
+      "client": "Paul Martin",
+      "title": ", Engagement Director ,",
       "company": "Moving Brands"
     }
   ]
