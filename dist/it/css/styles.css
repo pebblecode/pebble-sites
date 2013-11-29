@@ -849,21 +849,22 @@ h1, h2, h3, h4, h5, h6 {
 .testamonials-container li {
   margin-bottom: 60px;
 }
-/* line 149, ../../../src/shared/sass/_homepage.scss */
+/* line 154, ../../../src/shared/sass/_homepage.scss */
 .testamonials-container .text {
   font-size: 70px;
   margin-bottom: 0;
   color: #0099e6;
 }
-/* line 155, ../../../src/shared/sass/_homepage.scss */
+/* line 160, ../../../src/shared/sass/_homepage.scss */
 .testamonials-container .text:before, .testamonials-container .text:after {
   content: "'";
 }
-/* line 160, ../../../src/shared/sass/_homepage.scss */
+/* line 165, ../../../src/shared/sass/_homepage.scss */
 .testamonials-container span {
   font-weight: 700;
+  font-size: 26px;
 }
-/* line 164, ../../../src/shared/sass/_homepage.scss */
+/* line 170, ../../../src/shared/sass/_homepage.scss */
 .testamonials-container .title {
   font-weight: 300;
 }

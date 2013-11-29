@@ -144,6 +144,11 @@
 
   li {
     margin-bottom: 60px;
+    // text-align: which-pebble( left, right );
+
+    // &:nth-child(2){
+    //   text-align: which-pebble( right, left );
+    // }
   }
 
   .text {
@@ -159,6 +164,7 @@
 
   span{
     font-weight: 700;
+    font-size: 26px;
   }
 
   .title {
