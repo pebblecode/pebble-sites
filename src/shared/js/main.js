@@ -10,12 +10,13 @@ $(document).ready(function () {
       smallSquare = $('.small-square'),
       largeSquare = $('.large-square'),
       vertical = $('.vertical'),
-      horizontal = $('.horizontal');
+      horizontal = $('.horizontal'),
+      contactPanel = $('.contact-panel');
 
   homepageHead.height($(window).height() - 60);
 
 
-  homepageHead.css('padding-top', ($(window).height() - ($('.homepage-head h1').height() + $('.homepage-head h2').height())) / 2 + 25 + 'px');
+  homepageHead.css('padding-top', ($(window).height() - ( homepageHead.find( 'h1' ).height() + homepageHead.find( 'h2' ).height())) / 2 + 25 + 'px');
 
   navBtn.click(function () {
     siteHeader.toggleClass('expanded');
@@ -29,7 +30,7 @@ $(document).ready(function () {
 
     homepageHead.height($(window).height() - 60);
 
-    homepageHead.css('padding-top', ($(window).height() - ($('.homepage-head h1').height() + $('.homepage-head h2').height())) / 2 + 25 + 'px');
+    homepageHead.css('padding-top', ($(window).height() - ( homepageHead.find( 'h1' ).height() + homepageHead.find( 'h2' ).height())) / 2 + 25 + 'px');
 
 
   });
@@ -37,13 +38,6 @@ $(document).ready(function () {
   $(window).scroll(function () {
     homepageHead.css('background-position', '0 ' + ($(window).scrollTop() - 60) + 'px');
   });
-
-  function peopleGrid(person, x, y) {
-    $('.person-' + person).css({
-      top: squareSide * x,
-      left: squareSide * y
-    });
-  }
 
   // maps stuff. 
   function initialize() {
@@ -63,17 +57,13 @@ $(document).ready(function () {
     });
   }
 
-  if ($('#map-canvas').length > 0) {
-    google.maps.event.addDomListener(window, 'load', initialize);
-  }
-
   // sliding contacts
   $('.find-us-link').click(function () {
-    $('.contact-panel').addClass('active');
+    contactPanel.addClass( 'active' );
   });
 
   $('#map-canvas, .site-header').click(function () {
-    $('.contact-panel').removeClass('active');
+    contactPanel.removeClass( 'active' );
   });
 
   // people page stuff
@@ -89,7 +79,10 @@ $(document).ready(function () {
       peopleColumns = 3;
     } else if ($(window).width() <= 400) {
       peopleColumns = 2;
-      $('.horizontal, .vertical').removeClass('horizontal vertical').addClass('small-square');
+      horizontal.add( vertical ).removeClass('horizontal vertical').addClass('small-square');
+      horizontal = $( '.horizontal' );
+      vertical = $( '.vertical' );
+      smallSquare = $( '.small-square' );
     }
   }
 
@@ -112,7 +105,7 @@ $(document).ready(function () {
       isResizeBound: false
     });
 
-    $(window).resize(function (event) {
+    $(window).resize(function ( event ) {
       people.addClass('hide');
       respond();
       peopleSize();
@@ -125,7 +118,7 @@ $(document).ready(function () {
   });
 
   person.each(function () {
-    $(this).addClass(colorClasses[Math.floor(Math.random() * 4) + 0]);
+    $( this ).addClass(colorClasses[Math.floor(Math.random() * 4) + 0]);
   });
 
 });
