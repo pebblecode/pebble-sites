@@ -48,7 +48,7 @@ module.exports = function ( grunt ) {
     sass: {
       dist: {
         options: {
-          style: 'expanded',
+          style: 'compressed',
           lineNumbers: true,
           sourcemap: true
         },
@@ -65,7 +65,15 @@ module.exports = function ( grunt ) {
         src: [ 'src/code/data/**/*.json', 'src/code/data/**/*.json' ]
       },
       js: {
-        src: [ 'Gruntfile.js', 'src/shared/js/*.js', 'src/code/js/**/*.js', 'src/code/js/**/*.js' ]
+        src: [ 'Gruntfile.js', 'src/shared/js/*.js', 'src/code/js/**/*.js', 'src/code/js/**/*.js', '!src/shared/js/*.min.js' ]
+      }
+    },
+
+    uglify:{
+      my_target: {
+        files: {
+          'src/shared/js/main.min.js': [ 'src/shared/js/main.js' ]
+        }
       }
     },
 
@@ -82,13 +90,13 @@ module.exports = function ( grunt ) {
           {
             expand: true,
             cwd: 'src/shared/js/',
-            src: [ '**' ],
+            src: [ '**/*.min.js' ],
             dest: 'dist/code/js/'
           },
           {
             expand: true,
             cwd: 'src/shared/js/',
-            src: [ '**' ],
+            src: [ '**/*.min.js' ],
             dest: 'dist/it/js/'
           }
         ]
@@ -165,8 +173,8 @@ module.exports = function ( grunt ) {
       },
       // Watch for javascript changes. Run JShint 7 copy to dist
       js: {
-        files: [ 'Gruntfile.js', 'src/shared/js/*.js', 'src/code/js/**/*.js', 'src/code/js/**/*.js' ],
-        tasks: [ 'jshint', 'copy:sharedScripts', 'copy:codeScripts', 'copy:itScripts' ]
+        files: [ 'Gruntfile.js', 'src/shared/js/*.js', '!src/shared/js/*.min.js' ],
+        tasks: [ 'jshint', 'uglify', 'copy:sharedScripts', 'copy:codeScripts', 'copy:itScripts' ]
       },
       // watch for changes to images. Copy to dist
       images: {
@@ -198,6 +206,7 @@ module.exports = function ( grunt ) {
   grunt.loadNpmTasks( 'grunt-open' );
   grunt.loadNpmTasks( 'grunt-contrib-jshint' );
   grunt.loadNpmTasks( 'grunt-gh-pages' );
+  grunt.loadNpmTasks('grunt-contrib-uglify');
 
   grunt.registerTask( 'default', [ 'connect', 'watch' ] );
 
