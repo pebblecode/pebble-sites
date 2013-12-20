@@ -12,9 +12,10 @@ title: " | style-guide"
 <div class="clear-fix">
   {{#each styleGuide.colors }}
   <div class="left">
-    <div class="color-box" style="background: {{ this.value }};"></div>
+    <div class="color-box" style="background: {{ this.hex }};"></div>
     <span class="color-name">{{ this.name }}</span>
-    <span class="color-value">{{ this.value }}</span>
+    <span class="color-value">{{ this.hex }}</span>
+    <span class="color-value">{{{ this.rgb }}}</span>
   </div> 
   {{/each}}
 </div>
