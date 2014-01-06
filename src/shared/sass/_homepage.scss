@@ -23,7 +23,7 @@
   @include vendor( background-clip, text );
   @include vendor( text-fill-color, transparent );
 
-  &::before{
+  &::after{
     background: which-pebble($code-head, $it-head);
     content: '';
     position: absolute;
@@ -121,8 +121,8 @@
       right: 0;
       background: which-pebble( $code-head, darken( $it-head, 5 ) );
 
-      @include vendor( transform-origin, 0 50% );
-      @include vendor( transform, rotateY(180deg) );
+      @include vendor( transform-origin, 100% 50% );
+      @include vendor( transform, rotateY(-180deg) );
       @include vendor( transition, -prefix- transform .2s );
     }
   }
