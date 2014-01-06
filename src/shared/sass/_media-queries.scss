@@ -10,18 +10,6 @@
 
   .site-logo-container{
     height: $header-height-large;
-
-    // &:hover{
-    //   .site-logo{
-    //     -webkit-transform: rotateX(-90deg);   
-    //     background: which-pebble(darken($pc-pink, 25), darken($it-blue, 15));
-    //   }
-
-    //   .site-logo-flip{
-    //     -webkit-transform: rotateX(0deg);
-    //     background: which-pebble(saturate(lighten($pc-pink, 7.5), 100), lighten($it-blue, 5));
-    //   }
-    // }
   }
 
   .site-logo{
@@ -107,7 +95,7 @@
       padding: 0 12px;
       display: inline-block;
       background: which-pebble($pc-pink, $it-blue);
-      
+
       @include vendor( transform-origin, 50% 100% );
       @include vendor( transform, rotateX( -90deg ) );
       @include vendor( transition, -prefix- transform .3s, background .3s );
@@ -121,4 +109,16 @@
       }
     } 
   } // end .site-nav
+
+  // header offset for larger screens
+  .homepage-head,
+  .wrap {
+    margin-top: $header-height-large;
+  }
+
+  .people {
+    top: $header-height-large;
+  }
+
+
 } 

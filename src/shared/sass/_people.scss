@@ -2,7 +2,7 @@
 // PEOPLE
 //===============================================================================
 .people {
-  top: 60px;
+  top: $header-height-small;
   position: relative;
   overflow: hidden;
   transition: opacity .25s;
