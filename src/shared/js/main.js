@@ -59,6 +59,7 @@ $(document).ready(function () {
 
   // sliding contacts
   $('.find-us-link').click(function () {
+    initialize();
     contactPanel.addClass( 'active' );
   });
 
