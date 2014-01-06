@@ -78,18 +78,20 @@
         background: which-pebble($pc-pink, $it-blue);
         color: white;
         width: 100%;
-        -webkit-transform-origin: 50% 0%;
-        -webkit-transform: rotateX(0deg);
-        transition: -webkit-transform .3s, background .3s;
+
+        @include vendor( transform-origin, 50% 0% );
+        @include vendor( transform, rotateX(0deg) );
+        @include vendor( transition, -prefix- transform .2s, background .3s );
       }
 
       &:hover{
         &::after{
-          -webkit-transform: rotateX(-90deg);   
           background: which-pebble(darken($pc-pink, 25), darken($it-blue, 15));
+
+          @include vendor( transform, rotateX( -90deg ) );
         }
         span{
-          -webkit-transform: rotateX(0deg);
+          @include vendor( transform, rotateX( 0deg ) );
           background: which-pebble(saturate(lighten($pc-pink, 7.5), 100), lighten($it-blue, 5));
         }
       }
@@ -105,9 +107,10 @@
       padding: 0 12px;
       display: inline-block;
       background: which-pebble($pc-pink, $it-blue);
-      -webkit-transform-origin: 50% 100%;
-      -webkit-transform: rotateX(-90deg);
-      transition: -webkit-transform .3s, background .3s;
+      
+      @include vendor( transform-origin, 50% 100% );
+      @include vendor( transform, rotateX( -90deg ) );
+      @include vendor( transition, -prefix- transform .3s, background .3s );
     }
 
     li{

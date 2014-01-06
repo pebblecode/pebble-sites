@@ -15,12 +15,13 @@
 .homepage-head{
   background-image: url('../img/homepage-bg.jpg');
   background-size: cover;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
   padding: 0 60px;
   position: relative;
   background-position: 0 -60px;
   margin-top: 60px;
+
+  @include vendor( background-clip, text );
+  @include vendor( text-fill-color, transparent );
 
   &::before{
     background: which-pebble($code-head, $it-head);
@@ -64,12 +65,9 @@
   &:hover{
     color: which-pebble($pc-pink, $it-blue);
 
+    .block-1::after,
     .block-2::after{
-      -webkit-transform: rotateY(0deg);
-    } 
-
-    .block-1::after{
-      -webkit-transform: rotateY(0deg);
+      @include vendor( transform, rotateY(0deg) );
     } 
   }
 
@@ -84,15 +82,12 @@
   .block-1{
     font-weight: 300;
     padding: 50px 0 4px;
-    -webkit-perspective: 1000px;
+    @include vendor( perspective, 1000px );
 
     &::after{
       background-image: which-pebble(url('../img/reach.svg'), url('../img/device-icons.svg'));
       background-repeat: no-repeat;
       background-position: center bottom;
-      -webkit-transform-origin: 0 50%;
-      -webkit-transform: rotateY(180deg);
-      transition: -webkit-transform .2s;
       content: '';
       position: absolute;
       top: 0;
@@ -100,12 +95,16 @@
       bottom: 0;
       right: 0;
       background-color: which-pebble( $code-head, darken( $it-head, 5 ) );
+
+      @include vendor( transform-origin, 0 50% );
+      @include vendor( transform, rotateY(180deg) );
+      @include vendor( transition, -prefix- transform .2s );
     }
   }
 
   .block-2{
     padding: 4px 0 50px;
-    -webkit-perspective: 1000px;
+    @include vendor( perspective, 1000px );
 
     &::after{
       padding: 27px 0 0;
@@ -113,9 +112,6 @@
       font-family: "brandon-grotesque";
       font-weight: 900;
       font-style: italic;
-      -webkit-transform-origin: 100% 50%;
-      -webkit-transform: rotateY(-180deg);
-      transition: -webkit-transform .2s;
       content: attr(data-text);
       color: white;
       position: absolute;
@@ -125,6 +121,9 @@
       right: 0;
       background: which-pebble( $code-head, darken( $it-head, 5 ) );
 
+      @include vendor( transform-origin, 0 50% );
+      @include vendor( transform, rotateY(180deg) );
+      @include vendor( transition, -prefix- transform .2s );
     }
   }
 
@@ -144,11 +143,6 @@
 
   li {
     margin-bottom: 60px;
-    // text-align: which-pebble( left, right );
-
-    // &:nth-child(2){
-    //   text-align: which-pebble( right, left );
-    // }
   }
 
   .text {

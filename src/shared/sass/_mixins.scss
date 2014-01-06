@@ -43,3 +43,49 @@
   -moz-box-sizing: $type;
   -webkit-box-sizing: $type;
 }
+
+@mixin vendor($name, $args...) {
+  $vendors: -webkit-, -ms-, -moz-, -o-;
+  $nextWithVendor: false;
+  $first: true;
+  $cleanValues: null;
+  $cleanName: $name;
+  // @if nth( $name, 1 ) == -prefix- {
+  //   $cleanName: nth( $name, 2 );
+  // }
+ 
+  @each $vendor in $vendors {
+    $values: null;
+ 
+    @each $arg in $args {
+      @if nth( $arg, 1 ) == -prefix- {
+        $subValues: null;
+        @each $subValue in $arg {
+          @if $subValue != -prefix- {
+            $subValues: append( $subValues, $subValue );
+          }
+        }
+        $values: append( $values, $vendor + $subValues, comma );
+        @if $first {
+          $cleanValues: append( $cleanValues, $subValues, comma );
+        }
+      }
+      @else {
+        $values: append( $values, $arg, comma );
+        @if $first {
+          $cleanValues: append( $cleanValues, $arg, comma );
+        }
+      }
+    }
+    $first: false;
+ 
+    @if $cleanName == $name {
+      #{$vendor + $cleanName}: $values;
+    }
+    @else {
+      #{$cleanName}: $values;
+    }
+  }
+  
+  #{$cleanName}: $cleanValues;
+}
