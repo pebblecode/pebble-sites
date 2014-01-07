@@ -4,14 +4,15 @@
   "cta-1": "Take your first step along The Pebble Way today",
   "cta-2": "Book your Hack Day with us here",
   "cta-3": "Book A Hack Day",
-  "cta-help": "It all starts with a Hack Day - that you the client and our best brains in a room for a day. At the end of it we’ll have frantically worked through your most pressing problems, generating loads of ideas and turning one into a working prototype. All in 12hrs!",
+  "cta-help-header": "What are Hack Days?",
+  "cta-help-text": "Hack Days allow your best brains and ours to spend a day working together on your most pressing problems, generating loads of ideas and turning your favourites into a working prototypes THAT DAY.",
   "cta-link": "mailto:info@pebblecode.com?subject=Book a hack day",
   "testimonials": [
     {
       "text": "pebble has always delivered fantastic results. I couldn't recommend them highly enough",
       "client": "Michael Brady",
       "title": ", CEO ,",
-      "company": "bede gaming"
+      "company": "Bede Gaming"
     },
     {
       "text": "I would not hesitate to recommend their services",

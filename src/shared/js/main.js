@@ -39,6 +39,10 @@ $(document).ready(function () {
     homepageHead.css('background-position', '0 ' + ($(window).scrollTop() - 60) + 'px');
   });
 
+  $( '.cta-help-btn, .cta-help' ).click( function() {
+    $( '.cta-help-btn, .cta-help' ).toggleClass( 'active' );
+  });
+
   // maps stuff. 
   function initialize() {
     var mapOptions = {
