@@ -144,7 +144,8 @@ module.exports = function ( grunt ) {
       server: {
         options: {
           port: 7770,
-          base: 'dist/'
+          base: 'dist/',
+          hostname: '0.0.0.0'
         }
       }
     },

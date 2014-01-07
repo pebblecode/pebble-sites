@@ -13,25 +13,26 @@ $(document).ready(function () {
       horizontal = $('.horizontal'),
       contactPanel = $('.contact-panel');
 
-  homepageHead.height($(window).height() - 60);
+  // homepageHead.height($(window).height() - 60);
 
 
-  homepageHead.css('padding-top', ($(window).height() - ( homepageHead.find( 'h1' ).height() + homepageHead.find( 'h2' ).height())) / 2 + 25 + 'px');
+  // homepageHead.css('padding-top', ($(window).height() - ( homepageHead.find( 'h1' ).height() + homepageHead.find( 'h2' ).height())) / 2 + 25 + 'px');
+
+  // $(window).resize(function (event) {
+  //   if ($(window).width() > 600) {
+  //     siteHeader.removeClass('expanded');
+  //   }
+
+  //   homepageHead.height($(window).height() - 60);
+
+  //   homepageHead.css('padding-top', ($(window).height() - ( homepageHead.find( 'h1' ).height() + homepageHead.find( 'h2' ).height())) / 2 + 25 + 'px');
+
+
+  // });
+
 
   navBtn.click(function () {
     siteHeader.toggleClass('expanded');
-
-  });
-
-  $(window).resize(function (event) {
-    if ($(window).width() > 600) {
-      siteHeader.removeClass('expanded');
-    }
-
-    homepageHead.height($(window).height() - 60);
-
-    homepageHead.css('padding-top', ($(window).height() - ( homepageHead.find( 'h1' ).height() + homepageHead.find( 'h2' ).height())) / 2 + 25 + 'px');
-
 
   });
 
