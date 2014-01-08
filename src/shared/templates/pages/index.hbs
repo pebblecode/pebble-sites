@@ -7,13 +7,13 @@ title:
   <h2>{{ homepage.sub-head }}</h2>
 </header>
 <div class="cta-container">
-  <a href="{{ homepage.cta-link }}" target="_blank">
-    <span class="block-1">
-      {{ homepage.cta-1 }}
-      {{#if homepage.cta-1a }}
-        <br>{{ homepage.cta-1a }}s
-      {{/if}}
-    </span>
+  <span class="block-1">
+    {{ homepage.cta-1 }}
+    {{#if homepage.cta-1a }}
+      <br>{{ homepage.cta-1a }}s
+    {{/if}}
+  </span>
+  <a href="{{ homepage.cta-link }}" target="_blank"> 
     <span class="block-2" data-text="{{ homepage.cta-3 }}">{{ homepage.cta-2 }}</span>
   </a>
   {{#if homepage.cta-help-text }}
