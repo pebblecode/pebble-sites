@@ -76,22 +76,16 @@
 
 .testamonials-container {
   background: $paper;
-  padding: 120px 0 240px;
-
-  ul{
-    width: 95%;
-    margin: 0 auto;
-  }
+  padding: 60px 20px;
 
   li {
-    margin-bottom: 60px;
+    margin-bottom: 30px;
   }
 
   .text {
-    font-size: 70px;
+    font-size: 24px;
     margin-bottom: 0;
     color: which-pebble($pc-pink, $it-blue);
-    text-indent: -13px;
 
     &:before,
     &:after {
@@ -101,18 +95,9 @@
 
   span{
     font-weight: 700;
-    font-size: 26px;
   }
 
   .title {
     font-weight: 300;
   }
-}
-
-.theres-more {
-  position: fixed;
-  color: which-pebble($pc-pink, $it-blue);
-  bottom: 5px;
-  right: 12px;
-  font-size: 24px;
 }
