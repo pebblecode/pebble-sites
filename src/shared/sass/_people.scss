@@ -101,20 +101,12 @@
 }
 
 .vertical {
-  &:before{
-    // background-image: url( '../img/vertical.svg' );  
-  }
-
   img{
     width: 180%;
   }
 }
 
 .horizontal {
-  &:before {
-    // background-image: url( '../img/horizontal.svg' );  
-  }
-
   img{
     width: 50%;
     position: relative;
@@ -130,17 +122,25 @@
 
 .small-square {
 
-  &:before { 
-    // background-image: url( '../img/small-square-1.svg' );
-  }
-
-  &:nth-child(odd):before {
-    // background-image: url( '../img/small-square-2.svg' );    
-  }
 }
 
 .large-square {
-  &:before { 
-    // background-image: url( '../img/large-square.svg' );
+  h3 {
+    color: white;
+    font-size: 80px;
+    line-height: 0.9;
+    margin-bottom: 0;
+
+    &:first-child {
+      margin-top: 50px;
+    }
+  }
+
+  p {
+    padding: 20px;
+    text-align: left;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1.2
   }
 }
