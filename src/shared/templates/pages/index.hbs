@@ -6,7 +6,8 @@ title:
   <h1 class="call-out">{{ homepage.headline }}</h1>
   <h2>{{ homepage.sub-head }}</h2>
 </header>
-<div class="cta-container">
+
+<div class="cta-container-small">
   <span class="block-1">
     {{ homepage.cta-1 }}
     {{#if homepage.cta-1a }}
@@ -14,6 +15,19 @@ title:
     {{/if}}
   </span>
   <a href="{{ homepage.cta-link }}" target="_blank"> 
+    <span class="block-2" data-text="{{ homepage.cta-3 }}">{{ homepage.cta-2 }}</span>
+  </a>
+  <span class="cta-help-btn">?</span>
+</div>
+
+<div class="cta-container-large">
+  <a href="{{ homepage.cta-link }}" target="_blank">
+    <span class="block-1">
+      {{ homepage.cta-1 }}
+      {{#if homepage.cta-1a }}
+        <br>{{ homepage.cta-1a }}s
+      {{/if}}
+    </span>
     <span class="block-2" data-text="{{ homepage.cta-3 }}">{{ homepage.cta-2 }}</span>
   </a>
   {{#if homepage.cta-help-text }}
@@ -26,6 +40,7 @@ title:
   {{/if}}
   <span class="cta-help-btn">?</span>
 </div>
+
 <div class="testamonials-container">
   <ul>
     {{#each homepage.testimonials }}
