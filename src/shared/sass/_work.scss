@@ -31,6 +31,10 @@
   h3 {
    margin-bottom: 4px;
   }
+
+  .left {
+    float: none;
+  }
 }
 
 
@@ -51,12 +55,16 @@
   }
 
   .titanic {
-    margin: 0 0 20px;
+    display: block;
+    width: 80%;
+    max-width: 400px; 
+    margin: 0 auto 20px;
   }
 
   .hand {
     display: block;
-    width: 80%;
+    width: 100%;
+    max-width: 400px; 
     margin: 0 auto 20px;
   }
 }
@@ -71,12 +79,14 @@
   .cloud {
     display: block;
     width: 70%;
+    max-width: 400px; 
     margin: 10px auto 20px;
   }
 
   .pyramid {
     display: block;
     width: 80%;
+    max-width: 400px; 
     margin: 16px auto 0;
   }
 }
@@ -93,6 +103,7 @@
   img {
     display: block;
     width: 70%;
+    max-width: 400px; 
     margin: 10px auto;
   }
 }
@@ -103,12 +114,14 @@
   .innovation {
     display: block;
     width: 80%;
+    max-width: 400px; 
     margin: 10px auto 20px;
   }
 
   .trophy {
     display: block;
     width: 50%;
+    max-width: 400px; 
     margin: 20px auto;
   }
 }
@@ -125,15 +138,15 @@
   .locate {
     display: block;
     width: 80%;
+    max-width: 400px; 
     margin: 20px auto;
   }
 
   .three-100 {
     display: block;
-    width: 50%;
-    margin: -25% auto -5%;
-
-    @include vendor( transform, rotateZ( 60deg ) );
+    width: 80%;
+    max-width: 400px; 
+    margin: 20px auto;
   }
 }
 
@@ -143,12 +156,14 @@
   .complete {
     display: block;
     width: 90%;
+    max-width: 400px; 
     margin: 10px auto 20px;
   }
 
   .recycle {
     display: block;
     width: 80%;
+    max-width: 400px; 
     margin: 0 auto;
   }
 }
@@ -159,7 +174,10 @@
   padding: 40px 0 20px;
 
   img {
-    margin: 10px 0 20px; 
+    display: block;
+    width: 100%;
+    max-width: 400px; 
+    margin: 20px auto;
   }
 }
 
@@ -169,11 +187,15 @@
   .robot {
     display: block;
     width: 70%;
+    max-width: 400px; 
     margin: 10px auto 20px;
   }  
 
   .flexible {
-
+    display: block;
+    width: 100%;
+    max-width: 400px; 
+    margin: 20px auto;
   }
 }
 

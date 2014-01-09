@@ -120,5 +120,397 @@
     top: $header-height-large;
   }
 
-
+  // footer
+  .contact-panel {
+    display: block;
+  }
 } 
+
+// people
+
+// people
+//===============================================================================
+@media all and (min-width: 450px) {
+  .people {
+    position: relative;
+    overflow: hidden;
+    transition: opacity .25s;
+    margin-bottom: 70px;
+
+    .name,
+    .title{
+      display: block;
+      text-align: center;
+      line-height: 1;
+    }
+
+    .name{
+      font-weight: 700;
+      margin-top: 8px;
+    }
+
+    img{
+      width: 84%;
+    }
+
+    .person{
+      overflow: hidden;
+    }
+
+    &.hide {
+      opacity: 0;
+    }
+  }
+
+  .vertical,
+  .horizontal,
+  .small-square,
+  .large-square {
+    position: relative;
+    color: white;
+
+    &:before{
+      pointer-events:none;
+    }
+
+    &:before,
+    &:after {
+      position: absolute;
+      // background-size: 100% 100%;
+      background-repeat: no-repeat;
+      content: "";
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      z-index: 3;
+    }
+
+    &:after {
+      border: 1px solid white;
+    }
+
+    .name {
+      margin-top: 25px;
+    }
+  }
+
+  .color-1 {
+    background-color: which-pebble( $pc-pink, $it-blue );
+  }
+
+  .color-2 {
+    background-color: which-pebble( lighten( $pc-pink, 7.5 ) ,lighten( $it-blue, 7.5 ) ); 
+  }
+
+  .color-3 {
+    background-color: which-pebble( lighten( $pc-pink, 15 ) ,lighten( $it-blue, 15 ) ); 
+  }
+
+  .color-4 {
+    background-color: which-pebble( lighten( $pc-pink, 22.5 ) ,lighten( $it-blue, 22.5 ) ); 
+  }
+
+  .vertical {
+    &:before{
+      background-image: url( '../img/vertical.svg' );  
+    }
+
+    img{
+      width: 180%;
+    }
+  }
+
+  .horizontal {
+    &:before {
+      background-image: url( '../img/horizontal.svg' );  
+    }
+
+    img{
+      width: 50%;
+      position: relative;
+      top: -40px;
+    }
+
+    .name,
+    .title{
+      text-align: right;
+      margin-right: 25px;
+    }
+  }
+
+  .small-square {
+    &:before { 
+      background-image: url( '../img/small-square-1.svg' );
+    }
+
+    &:nth-child(odd):before {
+      background-image: url( '../img/small-square-2.svg' );    
+    }
+  }
+
+  .large-square {
+    &:before { 
+      background-image: url( '../img/large-square.svg' );
+    }
+  }
+}
+
+
+// homepage
+//===============================================================================
+@media all and (min-width: 850px) {
+
+  .homepage-bg{
+    background-image: url('../img/homepage-bg.jpg');
+    background-size: cover;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+  }
+
+  .homepage-head{
+    background-image: url('../img/homepage-bg.jpg');
+    background-size: cover;
+    padding: 120px 60px;
+    position: relative;
+    background-position: 0 -60px;
+    margin-top: $header-height-small;
+
+    @include vendor( background-clip, text );
+    @include vendor( text-fill-color, transparent );
+
+    &::after{
+      background: which-pebble($code-head, $it-head);
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
+
+    h1,
+    h2 {
+      color: white;
+      margin: 0;
+      text-align: left;
+    }
+
+    h1{
+      font-size: (108px / 1.5);
+    }
+
+    h2{
+      font-size: (49px / 1.5);
+      line-height: 1.1;
+      font-weight: 300;
+    }
+  }
+
+  .cta-container{
+    display: block;
+    margin: 180px auto;
+    width: 740px;
+    background: white;
+    font-size: 30px;
+    text-align: center;
+    position: relative;
+
+    a{
+      text-decoration: none;
+      display: block;
+      overflow: hidden;
+
+      &:hover{
+        color: which-pebble($pc-pink, $it-blue);
+
+        .block-1::after,
+        .block-2::after{
+          @include vendor( transform, rotateY(0deg) );
+        } 
+      }
+    }
+
+    .block-1,
+    .block-2{
+      display: block;
+      font-size: 44px;
+      line-height: 1.2;
+      position: relative;
+    }
+
+    .block-1{
+      font-weight: 300;
+      padding: 50px 0 4px;
+      @include vendor( perspective, 1000px );
+
+      &::after{
+        background-image: which-pebble(url('../img/reach.svg'), url('../img/device-icons.svg'));
+        background-repeat: no-repeat;
+        background-position: center bottom;
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        background-color: which-pebble( $code-head, darken( $it-head, 5 ) );
+
+        @include vendor( transform-origin, 0 50% );
+        @include vendor( transform, rotateY(180deg) );
+        @include vendor( transition, -prefix- transform .2s );
+      }
+    }
+
+    .block-2{
+      padding: 4px 0 50px;
+      @include vendor( perspective, 1000px );
+
+      &::after{
+        padding: 27px 0 0;
+        text-transform: uppercase;
+        font-family: "brandon-grotesque";
+        font-weight: 900;
+        font-style: italic;
+        content: attr(data-text);
+        color: white;
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        background: which-pebble( $code-head, darken( $it-head, 5 ) );
+
+        @include vendor( transform-origin, 100% 50% );
+        @include vendor( transform, rotateY(-180deg) );
+        @include vendor( transition, -prefix- transform .2s );
+      }
+    }
+  }
+
+  .cta-help-outer {
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+  }
+
+  .cta-help {
+    position: absolute;
+    background: which-pebble( $pc-pink, $it-blue );
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    pointer-events: auto;
+
+    @include vendor( transform, translateY( -100% ) );
+    @include vendor( transition, -prefix- transform .25s );
+
+    h4 {
+      color: white;
+      margin-top: 34px;
+    }
+
+    p {
+      color: white;
+      font-size: 23px;
+      padding: 0 10px;
+    }
+
+    &.active {
+      @include vendor( transform, translateY( 0 ) );
+    }
+  }
+
+  .cta-help-btn {
+    position: absolute;
+    background: white;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    top: 50%;
+    margin-top: -15px;
+    right: -40px;
+    line-height: 31px;
+    text-indent: 2px;
+    font-size: 24px;
+    cursor: pointer;
+    color: which-pebble( $pc-pink ,$it-blue );
+    font-weight: 700;
+
+    &:before {
+      content: "";
+      position: absolute;
+      border-radius: 50%;
+      height: 34px;
+      width: 34px;
+      top: -3px;
+      left: -3px;
+      border: 1px solid transparent;
+
+      @include vendor( transition, border-color .25s );
+    }
+
+    &:hover:before,
+    &.active:before {
+      border-color: white;
+    }
+  }
+
+  .testamonials-container {
+    background: $paper;
+    padding: 120px 0 240px;
+
+    ul{
+      width: 95%;
+      margin: 0 auto;
+    }
+
+    li {
+      margin-bottom: 60px;
+    }
+
+    .text {
+      font-size: 70px;
+      margin-bottom: 0;
+      color: which-pebble($pc-pink, $it-blue);
+      text-indent: -13px;
+
+      &:before,
+      &:after {
+        content: "'";
+      }
+    }
+
+    span{
+      font-weight: 700;
+      font-size: 26px;
+    }
+
+    .title {
+      font-weight: 300;
+    }
+  }
+
+  .theres-more {
+    position: fixed;
+    color: which-pebble($pc-pink, $it-blue);
+    bottom: 5px;
+    right: 12px;
+    font-size: 24px;
+  }
+}
+
+@media all and (min-width: 950px) {
+  .contact-panel {
+    font-size: 72px;
+  }
+}
