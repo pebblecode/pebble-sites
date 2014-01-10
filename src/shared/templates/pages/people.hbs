@@ -38,14 +38,15 @@ title: " | people"
     <img src="img/mug-shots/{{ people.person.5.image }}">
   </li>
 
-  <li class="large-square left person">
-  </li>
-
   <li class="small-square left person">
     <span class="name">{{ people.person.6.name }}</span>
     <span class="title">{{ people.person.6.title }}</span>
     <a href="{{ people.person.6.twitter }}" class="twitter">T</a>
     <img src="img/mug-shots/{{ people.person.6.image }}">
+  </li>
+
+  <li class="large-square left person">
+    {{{ people.copy-1 }}}
   </li>
 
   <li class="small-square left person">
@@ -68,9 +69,6 @@ title: " | people"
     <a href="{{ people.person.10.twitter }}" class="twitter">T</a>
     <img src="img/mug-shots/{{ people.person.10.image }}">
   </li>
-
-  <li class="large-square left person">
-  </li>
   
   <li class="horizontal left person">
     <span class="name">{{ people.person.0.name }}</span>
@@ -78,6 +76,11 @@ title: " | people"
     <a href="{{ people.person.0.twitter }}" class="twitter">T</a>
     <img src="img/mug-shots/{{ people.person.0.image }}">
   </li>
+
+  <li class="large-square left person">
+    {{{ people.cta }}}  
+  </li>
+
   {{#if people.person.11.name }}
     <li class="vertical left person">
       <span class="name">{{ people.person.7.name }}</span>
@@ -141,6 +144,7 @@ title: " | people"
 
   {{#if people.person.11.name }}
     <li class="large-square left person">
+      {{{ people.copy-2 }}}
     </li>  
   {{/if}}
 

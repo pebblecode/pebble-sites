@@ -1,5 +1,5 @@
 //===============================================================================
-// FOOTER
+// FOOTER 
 //===============================================================================
 .site-footer {
   background: $paper;
@@ -20,12 +20,14 @@
 }
 
 .contact-panel {
+  display: none;
   position: fixed;
   width: 100%;
   height: 100%;
   bottom: -100%;
   left: 0;
   z-index: 4;
+  font-size: 38px;
   @include vendor( transition, -prefix- transform .3s );
 
   &.active {
