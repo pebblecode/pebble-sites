@@ -294,8 +294,11 @@
     background-position: 0 -60px;
     margin-top: $header-height-small;
 
-    @include vendor( background-clip, text );
-    @include vendor( text-fill-color, transparent );
+    -webkit-text-fill-color: transparent;
+    background: -webkit-linear-gradient(transparent, transparent),
+                url('../img/homepage-bg.jpg') repeat;
+    background: -o-linear-gradient(transparent, transparent);
+                -webkit-background-clip: text;
 
     &::after{
       background: which-pebble($code-head, $it-head);
