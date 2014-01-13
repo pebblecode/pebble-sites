@@ -172,7 +172,7 @@ module.exports = function ( grunt ) {
         files: 'src/shared/sass/*.scss',
         tasks: [ 'sass' ]
       },
-      // Watch for javascript changes. Run JShint 7 copy to dist
+      // Watch for javascript changes. Run JShint & copy to dist
       js: {
         files: [ 'Gruntfile.js', 'src/shared/js/*.js', '!src/shared/js/*.min.js' ],
         tasks: [ 'jshint', 'uglify', 'copy:sharedScripts', 'copy:codeScripts', 'copy:itScripts' ]
