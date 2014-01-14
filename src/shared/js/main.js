@@ -6,30 +6,13 @@ $(document).ready(function () {
       navBtn = $(' .nav-btn'),
       siteHeader = $('.site-header'),
       people = $( '.people' ),
+      blank = $( '.blank' ),
       person = $( '.person' ),
       smallSquare = $('.small-square'),
       largeSquare = $('.large-square'),
       vertical = $('.vertical'),
       horizontal = $('.horizontal'),
       contactPanel = $('.contact-panel');
-
-  // homepageHead.height($(window).height() - 60);
-
-
-  // homepageHead.css('padding-top', ($(window).height() - ( homepageHead.find( 'h1' ).height() + homepageHead.find( 'h2' ).height())) / 2 + 25 + 'px');
-
-  // $(window).resize(function (event) {
-  //   if ($(window).width() > 600) {
-  //     siteHeader.removeClass('expanded');
-  //   }
-
-  //   homepageHead.height($(window).height() - 60);
-
-  //   homepageHead.css('padding-top', ($(window).height() - ( homepageHead.find( 'h1' ).height() + homepageHead.find( 'h2' ).height())) / 2 + 25 + 'px');
-
-
-  // });
-
 
   navBtn.click(function () {
     siteHeader.toggleClass('expanded');
@@ -73,11 +56,6 @@ $(document).ready(function () {
     }
   });
 
-  // small screen maps stuff
-  // $('.find-us-link').click(function () {
-  //   window.location = 'https://maps.google.com/maps?q=pebble+%7Bcode%7D,+Durham+Street,+London,+United+Kingdom&hl=en-US&ll=51.485632,-0.118747&spn=0.011264,0.024312&sll=51.485672,-0.118554&sspn=0.022528,0.048623&oq=pebble+code&t=m&z=16&iwloc=A';
-  // });
-
   $('#map-canvas, .site-header').click(function () {
     contactPanel.removeClass( 'active' );
   });
@@ -107,6 +85,7 @@ $(document).ready(function () {
   peopleSize = function () {
     var unit = Math.floor($(window).innerWidth() / peopleColumns);
     smallSquare.height(unit).width(unit);
+    blank.height(unit).width(unit);
     largeSquare.height(unit * 2).width(unit * 2);
     vertical.height(unit * 2).width(unit);
     horizontal.height(unit).width(unit * 2);

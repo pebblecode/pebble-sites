@@ -23,10 +23,10 @@
   }
 
   &.expanded{
-    height: 158px;
+    height: 200px;
 
     &::before{
-      top: 158px;
+      top: 200px;
     }
   }
 }
