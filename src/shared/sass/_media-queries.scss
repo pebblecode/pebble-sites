@@ -131,6 +131,36 @@
 
 // Navigation media query
 @media all and (min-width: 600px) {
+  .blog-header {
+    padding: ( $header-height-large + 10 ) 20px 20px;
+
+    h2 {
+      font-size: 62px;
+    }
+
+    h3 {
+      font-size: 32px;
+    }
+
+  }
+
+  .post {
+    font-size: 18px;
+    padding: 60px 20px;
+
+    h3 {
+      font-size: 26px;
+    }
+
+    .post-title {
+      font-size: 42px;
+    }
+  }
+
+  .author {
+    font-size: 32px;
+  }
+
   .site-header {
     height: $header-height-large;
     padding: 0 18px;
@@ -595,5 +625,32 @@
 @media all and (min-width: 950px) {
   .contact-panel {
     font-size: 72px;
+  }
+}
+
+@media all and (min-width: 1000px) {
+  .post-content {
+    margin: 0;
+  }
+
+  .post-meta {
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    max-width: 300px;
+    text-align: right;
+
+    .tags li{
+      display: block;
+    }
+  }
+
+  .author {
+    display: block;
+    margin: 0;
+  }
+
+  .date {
+    margin-bottom: 20px;
   }
 }
