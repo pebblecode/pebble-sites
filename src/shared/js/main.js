@@ -137,4 +137,15 @@ $(document).ready(function () {
     $( this ).addClass(colorClasses[Math.floor(Math.random() * 4) + 0]);
   });
 
+  // browser stuffs
+  if ( !Modernizr.svg ) {
+    $('img[src*="svg"]').attr('src', function() {
+      return $(this).attr('src').replace('.svg', '.png');
+    });
+  }
+
+  if( !Modernizr.mq( 'only all' ) ) {
+    $( 'html' ).addClass( 'no-mq' );
+  }
+
 });

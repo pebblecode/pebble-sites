@@ -69,6 +69,11 @@
   }
 }
 
+.no-csstransforms3d .block-1::after,
+.no-csstransforms3d .block-2::after{
+  display: none;
+}
+
 
 .cta-container-large {
     display: none;
