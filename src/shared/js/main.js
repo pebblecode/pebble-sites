@@ -12,7 +12,8 @@ $(document).ready(function () {
       largeSquare = $('.large-square'),
       vertical = $('.vertical'),
       horizontal = $('.horizontal'),
-      contactPanel = $('.contact-panel');
+      contactPanel = $('.contact-panel'),
+      helpPanel = $('.cta-help-btn, .cta-help');
 
   navBtn.click(function () {
     siteHeader.toggleClass('expanded');
@@ -23,8 +24,8 @@ $(document).ready(function () {
     homepageHead.css('background-position', '0 ' + ($(window).scrollTop() - 60) + 'px');
   });
 
-  $( '.cta-help-btn, .cta-help' ).click( function() {
-    $( '.cta-help-btn, .cta-help' ).toggleClass( 'active' );
+  helpPanel.click( function() {
+    helpPanel.toggleClass( 'active' );
   });
 
   // large screen maps stuff.
