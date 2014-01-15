@@ -4,6 +4,7 @@
 .blog-header {
   background-color: $pc-aqua; 
   padding: $header-height-small 0 10px;
+  position: relative;
 
   h2,
   h3 {
@@ -19,7 +20,6 @@
     font-weight: 300;
     line-height: 1.2;
   }
-
 }
 
 .blog-header-inner {
