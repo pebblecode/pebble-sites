@@ -95,8 +95,8 @@ $(document).ready(function () {
   peopleSize();
 
   $(function () {
-    var $container = people;
-    $container.masonry({
+    var container = people;
+    container.masonry({
       itemSelector: '.person',
       isResizeBound: false
     });
@@ -105,10 +105,10 @@ $(document).ready(function () {
       people.addClass('hide');
       respond();
       peopleSize();
-      $container.masonry();
+      container.masonry();
     });
 
-    $container.masonry('on', 'layoutComplete', function () {
+    container.masonry('on', 'layoutComplete', function () {
       people.removeClass('hide');
     });
   });
