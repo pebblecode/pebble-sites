@@ -72,7 +72,8 @@ module.exports = function ( grunt ) {
     uglify:{
       my_target: {
         files: {
-          'src/shared/js/main.min.js': [ 'src/shared/js/main.js' ]
+          'src/shared/js/main.min.js': [ 'src/shared/js/main.js' ],
+          'src/shared/js/tumblr.min.js': [ 'src/shared/js/tumblr.js' ]
         }
       }
     },
