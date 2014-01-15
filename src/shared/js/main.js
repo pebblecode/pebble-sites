@@ -12,7 +12,8 @@ $(document).ready(function () {
       largeSquare = $('.large-square'),
       vertical = $('.vertical'),
       horizontal = $('.horizontal'),
-      contactPanel = $('.contact-panel');
+      contactPanel = $('.contact-panel'),
+      helpPanel = $('.cta-help-btn, .cta-help');
 
   navBtn.click(function () {
     siteHeader.toggleClass('expanded');
@@ -23,11 +24,11 @@ $(document).ready(function () {
     homepageHead.css('background-position', '0 ' + ($(window).scrollTop() - 60) + 'px');
   });
 
-  $( '.cta-help-btn, .cta-help' ).click( function() {
-    $( '.cta-help-btn, .cta-help' ).toggleClass( 'active' );
+  helpPanel.click( function() {
+    helpPanel.toggleClass( 'active' );
   });
 
-  // large screen maps stuff. 
+  // large screen maps stuff.
   function initialize() {
     var mapOptions = {
       center: new google.maps.LatLng(51.485672, -0.118554),
@@ -48,7 +49,7 @@ $(document).ready(function () {
   // sliding contacts
   $('.find-us-link').click(function () {
     if ($(window).width() <= 600) {
-      window.location = 'https://maps.google.com/maps?q=pebble+%7Bcode%7D,+Durham+Street,+London,+United+Kingdom&hl=en-US&ll=51.485632,-0.118747&spn=0.011264,0.024312&sll=51.485672,-0.118554&sspn=0.022528,0.048623&oq=pebble+code&t=m&z=16&iwloc=A';    
+      window.location = 'https://maps.google.com/maps?q=pebble+%7Bcode%7D,+Durham+Street,+London,+United+Kingdom&hl=en-US&ll=51.485632,-0.118747&spn=0.011264,0.024312&sll=51.485672,-0.118554&sspn=0.022528,0.048623&oq=pebble+code&t=m&z=16&iwloc=A';
     }
     else {
       initialize();
@@ -65,13 +66,14 @@ $(document).ready(function () {
   var colorClasses = ['color-1', 'color-2', 'color-3', 'color-4'];
 
   function respond() {
-    if ($(window).width() < 1000 && $(window).width() > 800) {
+    var windowWidth = $(window).width();
+    if (windowWidth < 1000 && windowWidth > 800) {
       peopleColumns = 5;
-    } else if ($(window).width() <= 800 && $(window).width() > 600) {
+    } else if (windowWidth <= 800 && windowWidth > 600) {
       peopleColumns = 4;
-    } else if ($(window).width() <= 600 && $(window).width() > 400) {
+    } else if (windowWidth <= 600 && windowWidth > 400) {
       peopleColumns = 3;
-    } else if ($(window).width() <= 400) {
+    } else if (windowWidth <= 400) {
       peopleColumns = 2;
       horizontal.add( vertical ).removeClass('horizontal vertical').addClass('small-square');
       horizontal = $( '.horizontal' );
@@ -94,8 +96,8 @@ $(document).ready(function () {
   peopleSize();
 
   $(function () {
-    var $container = people;
-    $container.masonry({
+    var container = people;
+    container.masonry({
       itemSelector: '.person',
       isResizeBound: false
     });
@@ -104,10 +106,10 @@ $(document).ready(function () {
       people.addClass('hide');
       respond();
       peopleSize();
-      $container.masonry();
+      container.masonry();
     });
 
-    $container.masonry('on', 'layoutComplete', function () {
+    container.masonry('on', 'layoutComplete', function () {
       people.removeClass('hide');
     });
   });
