@@ -27,7 +27,7 @@ $(document).ready(function () {
     $( '.cta-help-btn, .cta-help' ).toggleClass( 'active' );
   });
 
-  // large screen maps stuff. 
+  // large screen maps stuff.
   function initialize() {
     var mapOptions = {
       center: new google.maps.LatLng(51.485672, -0.118554),
@@ -48,7 +48,7 @@ $(document).ready(function () {
   // sliding contacts
   $('.find-us-link').click(function () {
     if ($(window).width() <= 600) {
-      window.location = 'https://maps.google.com/maps?q=pebble+%7Bcode%7D,+Durham+Street,+London,+United+Kingdom&hl=en-US&ll=51.485632,-0.118747&spn=0.011264,0.024312&sll=51.485672,-0.118554&sspn=0.022528,0.048623&oq=pebble+code&t=m&z=16&iwloc=A';    
+      window.location = 'https://maps.google.com/maps?q=pebble+%7Bcode%7D,+Durham+Street,+London,+United+Kingdom&hl=en-US&ll=51.485632,-0.118747&spn=0.011264,0.024312&sll=51.485672,-0.118554&sspn=0.022528,0.048623&oq=pebble+code&t=m&z=16&iwloc=A';
     }
     else {
       initialize();
