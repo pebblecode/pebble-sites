@@ -65,13 +65,14 @@ $(document).ready(function () {
   var colorClasses = ['color-1', 'color-2', 'color-3', 'color-4'];
 
   function respond() {
-    if ($(window).width() < 1000 && $(window).width() > 800) {
+    var windowWidth = $(window).width();
+    if (windowWidth < 1000 && windowWidth > 800) {
       peopleColumns = 5;
-    } else if ($(window).width() <= 800 && $(window).width() > 600) {
+    } else if (windowWidth <= 800 && windowWidth > 600) {
       peopleColumns = 4;
-    } else if ($(window).width() <= 600 && $(window).width() > 400) {
+    } else if (windowWidth <= 600 && windowWidth > 400) {
       peopleColumns = 3;
-    } else if ($(window).width() <= 400) {
+    } else if (windowWidth <= 400) {
       peopleColumns = 2;
       horizontal.add( vertical ).removeClass('horizontal vertical').addClass('small-square');
       horizontal = $( '.horizontal' );
