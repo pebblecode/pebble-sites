@@ -103,34 +103,34 @@ module.exports = function ( grunt ) {
       },
       // copy pebble {code} specific javascript
       codeScripts: {
-        files: [{ 
+        files: [{
           expand: true,
           cwd: 'src/code/js/',
           src: [ '**' ],
-          dest: 'dist/code/js/' 
+          dest: 'dist/code/js/'
         }]
       },
       // copy pebble.it specific javascript
       itScripts: {
-        files: [{ 
+        files: [{
           expand: true,
           cwd: 'src/it/js/',
           src: [ '**' ],
-          dest: 'dist/it/js/' 
+          dest: 'dist/it/js/'
         }]
       },
       // copy pebble {code} images
       codeImages: {
-        files: [{ 
+        files: [{
           expand: true,
           cwd: 'src/code/img/',
           src: [ '**' ],
-          dest: 'dist/code/img/' 
+          dest: 'dist/code/img/'
         }]
       },
       // copy pebble.it images
       itImages: {
-        files: [{ 
+        files: [{
           expand: true,
           cwd: 'src/it/img/',
           src: [ '**' ],
@@ -153,7 +153,7 @@ module.exports = function ( grunt ) {
     // open browser on start
     open: {
       dev: {
-        path: 'http://localhost:7770'  
+        path: 'http://localhost:7770'
       }
     },
 
