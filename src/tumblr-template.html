@@ -55,7 +55,32 @@
 
     <!-- tumblr code -->
 
-    
+    {block:Posts}
+      {block:Text}
+
+        <section class="post">
+          <div class="post-content">
+            {block:Title}
+              <h2 class="post-title call-out"><a href="{Permalink}">{Title}</a></h2>
+            {/block:Title}
+
+            {Body}
+          </div>
+
+          <div class="post-meta">
+            <h4 class="author">George Ornbo</h4>
+            <span class="date">7th January 2014</span> 
+            <ul class="tags">
+              <li> <a href="">CSS</a>  </li>
+              <li> <a href="">SASS</a>  </li>
+              <li> <a href="">LESS</a>  </li>
+              <li> <a href="">design</a>  </li>
+            </ul>
+          </div>
+        </section>
+
+      {/block:Text}
+    {/block:Posts}
 
     <!-- end tumblr code -->
 
