@@ -96,16 +96,21 @@ $(document).ready(function () {
 
   $(function () {
     var container = people;
-    container.masonry({
+    var masonryParams = {
       itemSelector: '.person',
       isResizeBound: false
-    });
+    };
+
+    // Initilise masonry
+    container.masonry(masonryParams);
 
     $(window).resize(function ( event ) {
       people.addClass('hide');
       respond();
       peopleSize();
-      container.masonry();
+
+      // Reflow masonry
+      container.masonry(masonryParams);
     });
 
     container.masonry('on', 'layoutComplete', function () {
