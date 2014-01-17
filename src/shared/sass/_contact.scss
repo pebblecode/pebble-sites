@@ -19,7 +19,8 @@
 .phone-email {
   z-index: 2;
   position: absolute;
-  left: 26px;
+  left: 20px;
+  padding-right: 20px;
 
   span,
   a {
@@ -38,4 +39,9 @@
 
 .phone-email {
   bottom: 40px;
+}
+
+.address.tera,
+.phone-email.tera{
+  font-size: 22px;
 }

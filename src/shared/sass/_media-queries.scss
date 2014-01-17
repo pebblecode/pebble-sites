@@ -4,6 +4,11 @@
 // people
 //===============================================================================
 @media all and (min-width: 450px) {
+  .address.tera,
+  .phone-email.tera{
+    font-size: 34px;
+  }
+
   .people {
     position: relative;
     overflow: hidden;
@@ -131,6 +136,11 @@
 
 // Navigation media query
 @media all and (min-width: 600px) {
+  .address.tera,
+  .phone-email.tera{
+    font-size: 52px;
+  }
+
   .blog-header {
     padding: ( $header-height-large + 10 ) 20px 20px;
 
@@ -314,6 +324,10 @@
 // homepage
 //===============================================================================
 @media all and (min-width: 850px) {
+  .address.tera,
+  .phone-email.tera{
+    font-size: 62px;
+  }
 
   .homepage-head {
     padding: 120px 60px;
@@ -633,7 +647,8 @@
 }
 
 @media all and (min-width: 950px) {
-  .contact-panel {
+  .address.tera,
+  .phone-email.tera{
     font-size: 72px;
   }
 }
