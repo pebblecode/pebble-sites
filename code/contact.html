@@ -60,6 +60,24 @@
       <a href="tel:+442033273940">+44 (0) 20 3327 3940</a> 
       <a href="mailto:hello@pebblecode.com">hello@pebblecode.com</a> 
     </div>
+    <script type="text/javascript">
+      window.onload = function() {
+        var mapOptions = {
+          center: new google.maps.LatLng(51.485672, -0.118554),
+          zoom: 15,
+          scrollwheel: false,
+          disableDefaultUI: true
+        };
+        var map = new google.maps.Map(document.getElementById("map-canvas"),
+          mapOptions);
+        var marker = new google.maps.Marker({
+          position: new google.maps.LatLng(51.485672, -0.118554),
+          map: map,
+          title: "Hello World!"
+        });
+        $('.site-footer').hide();
+      }
+    </script>
     <footer class="site-footer">
       <ul>
         <li> <a href="tel:+442033273940">+44 (0) 20 3327 3940</a>  </li>
