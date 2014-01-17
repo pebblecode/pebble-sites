@@ -129,18 +129,19 @@
 }
 
 .large-square {
+  position: relative;
+
   h3 {
     color: white;
     font-size: 80px;
     line-height: 0.9;
     margin-bottom: 0;
-
-    &:first-child {
-      margin-top: 50px;
-    }
   }
 
   p {
+    position: relative;
+    top: 50%;
+    @include vendor( transform, translateY(-50%) );
     padding: 26px;
     text-align: left;
     font-size: 22px;
@@ -161,4 +162,10 @@
   &:hover {
     background-color: darken($pc-pink, 15) !important;    
   }
+}
+
+.people-cta-inner {
+  position: relative;
+  top: 50%;
+  @include vendor( transform, translateY(-50%) );
 }
