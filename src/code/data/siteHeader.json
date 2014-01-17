@@ -3,6 +3,6 @@
     { "page": "work", "url": "work" },
     { "page": "people", "url": "people"  },
     { "page": "contact", "url": "contact"  },
-    { "page": "blog", "url": "blog"  }
+    { "page": "blog", "url": "http://pebblecodestaging.tumblr.com/"  }
   ]
 }
