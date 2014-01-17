@@ -58,7 +58,11 @@
   }
 }
 
-.post-content {
+.post-content,
+.post-meta,
+.thoughts,
+.pagination-inner {
+  width: 100%;
   max-width: 650px;
   margin: 0 auto;
 }
@@ -69,3 +73,59 @@
   font-size: 22px;
 }
 
+.thoughts {
+  span {
+    font-weight: 700;
+  }
+
+  a {
+    text-decoration: none;
+    position: relative;
+
+    &:after {
+      content: "";
+      background-color: $pc-pink;
+      position: absolute; 
+      background-image: url('../img/tweet.png');
+      background-size: cover;
+      width: 20px;
+      height: 20px;
+      right: -25px;
+      top: 1px;
+    }
+
+    &:hover:after{
+      background-color: darken($pc-pink, 15); 
+    }
+  }
+}
+
+.pagination {
+  padding: 0 20px;
+  max-width: 950px;
+  margin: 40px auto 60px;
+
+  a {
+    text-decoration: none;
+    font-weight: 300;
+    font-style: italic;
+  }
+
+  a:first-child:before {
+    content: "◀ ";
+    color: $ink;
+  }
+
+  a:nth-child(2) {
+    float: right;
+
+    &:after {
+      content: " ▶";
+      color: $ink;
+    }
+  }
+}
+
+.pagination-inner {
+  margin: 0;
+}
