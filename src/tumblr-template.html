@@ -68,20 +68,35 @@
           </div>
 
           <div class="post-meta">
-            <h4 class="author">George Ornbo</h4>
-            <span class="date">7th January 2014</span> 
+            <h4 class="author">{PostAuthorName}</h4>
+            {block:Date}
+              <span class="date">{DayOfMonth}{DayOfMonthSuffix} {Month} {Year}</span> 
+            {/block:Date}
+            {block:HasTags}
             <ul class="tags">
-              <li> <a href="">CSS</a>  </li>
-              <li> <a href="">SASS</a>  </li>
-              <li> <a href="">LESS</a>  </li>
-              <li> <a href="">design</a>  </li>
+              {block:Tags}
+                <li><a href="">{Tag}</a></li>
+              {/block:Tags}
             </ul>
+            {/block:HasTags}
           </div>
         </section>
 
       {/block:Text}
     {/block:Posts}
 
+    {block:Pagination}
+    <div class="pagination">
+      <div class="pagination-inner">
+        {block:PreviousPage}
+          <a href="">newer</a>
+        {/block:PreviousPage} 
+        {block:NextPage}
+        <a href="">older</a> 
+        {/block:NextPage}
+      </div>
+    </div>
+    {/block:Pagination}
     <!-- end tumblr code -->
 
     <footer class="site-footer">
