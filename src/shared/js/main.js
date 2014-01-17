@@ -129,4 +129,8 @@ $(document).ready(function () {
     $( 'html' ).addClass( 'no-mq' );
   }
 
+  $( '.people-cta' ).click( function() {
+    window.open("http://pebblecode.mytribehr.com/careers", '_blank');
+  });
+
 });
