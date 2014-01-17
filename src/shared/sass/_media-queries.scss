@@ -4,6 +4,10 @@
 // people
 //===============================================================================
 @media all and (min-width: 450px) {
+  .blank {
+    display: block;
+  }
+
   .address.tera,
   .phone-email.tera{
     font-size: 34px;

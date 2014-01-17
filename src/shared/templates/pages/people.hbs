@@ -24,6 +24,9 @@ title: " | people"
     <img src="img/mug-shots/{{ people.person.3.image }}">
   </li>
 
+  <li class="small-square left person blank">
+  </li>
+
   <li class="small-square left person">
     <span class="name">{{ people.person.4.name }}</span>
     <span class="title">{{ people.person.4.title }}</span>
@@ -61,6 +64,9 @@ title: " | people"
     <span class="title">{{ people.person.9.title }}</span>
     <a href="{{ people.person.9.twitter }}" class="twitter">T</a>
     <img src="img/mug-shots/{{ people.person.9.image }}">
+  </li>
+
+  <li class="small-square left person blank">
   </li>
 
   <li class="vertical left person">
@@ -115,6 +121,11 @@ title: " | people"
     </li>  
   {{/if}}
   
+  {{#if people.person.11.name }}
+    <li class="small-square left person blank">
+    </li>
+  {{/if}}
+
   {{#if people.person.11.name }}
     <li class="horizontal left person">
       <span class="name">{{ people.person.13.name }}</span>
